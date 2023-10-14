@@ -7,15 +7,25 @@ const createWindow = () => {
     height: 900,
     frame: false,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      contextIsolation: true,
   }
   })
 
   win.loadFile('login.html')
 
   ipcMain.on('window-close',function(){
-    win.close();
+    app.quit();
   }) 
+  
+  ipcMain.on('window-index', function(){
+    const indexwin = new BrowserWindow({
+      width: 800,
+      height: 600,
+      //frame: false,
+      })
+      indexwin.loadURL(path.join('file:',__dirname,'index.html')); 
+  })
 }
 
 app.whenReady().then(() => {
@@ -33,3 +43,4 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
+

@@ -1,5 +1,9 @@
-const { ipcRenderer } = require('electron')
+const {  contextBridge, ipcRenderer } = require('electron')
 
-window.close = function () {
-    ipcRenderer.send('window-close');
-}
+contextBridge.exposeInMainWorld('REDAPI', {
+    close: () => ipcRenderer.send('window-close')
+});
+
+contextBridge.exposeInMainWorld('RED', {
+    openIndex: () => ipcRenderer.send('window-index')
+});
