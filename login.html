@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>RED 点餐配送系统</title>
+  </head>
+  <body>
+    <div class="drag-part"></div>
+    <div class="wrapper">
+        <div id="closeWindow" class="btn close-btn" onclick="closeWindow()"></div>
+    </div>
+    <div class="login_L" id="left"></div>
+    <div class="login_R" id="Right">
+      <h3>RED 点餐配送系统</h3>
+      <p class="font_s">登录页面</p>
+      <p class="font_ss">账号：</p>
+      <input class="text_id" type="text" size="20" maxlength="30" value="Account">
+      <p class="font_ss">密码：</p>
+      <input class="text_password" type="password" size="20" maxlength="30" value="Password">
+      <button class="LoginBTN">登录</button>
+    </div>
+  </body>
+  <script src="./renderer.js"></script>
+</html>

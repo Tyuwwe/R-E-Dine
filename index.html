@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>你好!</title>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>RED 点餐配送系统</title>
   </head>
   <body>
-    <h1>你好!</h1>
-    我们正在使用 Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    和 Electron <span id="electron-version"></span>.
-    <script src="./renderer.js"></script>
+    <div class="block" id="left">
+      <h1>RED</h1>
+      <h2>R-E-Dine</h2>
+    </div>
+    <div class="block" id="Right">
+      <h1>Order</h1>
+      <div class="order-list">
+        <h2>Order#1</h2>
+      </div>
+      <div class="order-list">
+        <h2>Order#2</h2>
+      </div>
+    </div>
   </body>
+  <script src="./renderer.js"></script>
 </html>
