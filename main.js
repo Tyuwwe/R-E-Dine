@@ -9,7 +9,7 @@ const createWindow = () => {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
-  }
+    }
   })
 
   win.loadFile('login.html')
@@ -20,12 +20,22 @@ const createWindow = () => {
   
   ipcMain.on('window-index', function(){
     const indexwin = new BrowserWindow({
-      width: 800,
-      height: 600,
-      //frame: false,
+      width: 960,
+      height: 540,
+      frame: false,
+      webPreferences: {
+        preload: path.join(__dirname, 'preload.js'),
+        contextIsolation: true,
+      }
       })
-      indexwin.loadURL(path.join('file:',__dirname,'index.html')); 
+      indexwin.loadURL(path.join('file:',__dirname,'index.html'));
+      win.close();
+      ipcMain.on('index-close',function(){
+        indexwin.destroy();
+      }) 
+      
   })
+
 }
 
 app.whenReady().then(() => {

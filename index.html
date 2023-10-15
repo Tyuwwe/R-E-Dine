@@ -13,20 +13,43 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>RED 点餐配送系统</title>
   </head>
-  <body>
-    <div class="block" id="left">
+  <body class="index-body">
+    <div class="drag-part"></div>
+    <div class="wrapper">
+        <div id="closeIndexWindow" class="btn close-btn"></div>
+    </div>
+    <div class="block-left">
       <h1>RED</h1>
       <h2>R-E-Dine</h2>
-    </div>
-    <div class="block" id="Right">
-      <h1>Order</h1>
-      <div class="order-list">
-        <h2>Order#1</h2>
+      <div class="rest-list">
+        <div class="rest-title">
+          <p class="rest-title-font">Restaurant List</p>
+        </div>
+        <div class="rest-list-box">
+          <div class="empty"></div>
+          <div class="rest-list-case"><r class="rest-list-title">French Restaurant</r></div>
+          <div class="rest-list-btn">Select</div>
+          <div class="rest-list-case"><r class="rest-list-title">Italian Restaurant</r></div>
+          <div class="rest-list-btn">Select</div>
+        </div>
       </div>
-      <div class="order-list">
-        <h2>Order#2</h2>
+    </div>
+    <div class="block-right">
+      <h1 class="right-title">Order</h1>
+      <h2 class="right-subtitle">选择你想要的食物</h2>
+      <div class="order-list-box">
+        <div class="order-list">Order#1</div>
+        <div class="order-list">Order#2</div>
+        <div class="order-list">Order#3</div>
+        <div class="order-list">Order#4</div>
+        <div class="order-list">Order#5</div>
+        <div class="order-list">Order#6</div>
+        <div class="order-list">Order#7</div>
+        <div class="order-list">Order#8</div>
+        <div class="order-list">Order#9</div>
+        <div class="order-list">Order#10</div>
       </div>
     </div>
   </body>
-  <script src="./renderer.js"></script>
+  <script src="./index-renderer.js"></script>
 </html>
