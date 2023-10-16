@@ -24,10 +24,31 @@ for (i = 0; i < restbtn.length; i++) {
         if( select.className == "rest-list-btn" ) {
             select.setAttribute("class", "rest-list-btn-selected");
             select.innerHTML = "Selected";
+            console.log(select.id);
+            showorder(select.id);
         }
         else {
             select.setAttribute("class", "rest-list-btn");
             select.innerHTML = "Select";
+            hideorder(select.id);
         }
     })
+}
+
+function showorder(rest) {
+    var order = document.getElementsByName(rest);
+    for(i = 0; i < order.length; i++) {
+        if((order.className!="rest-list-btn")&&(order.className!="rest-list-btn-selected")) {
+            order[i].style.display = "flex";
+        }
+    }
+}
+
+function hideorder(rest) {
+    var order = document.getElementsByName(rest);
+    for(i = 0; i < order.length; i++) {
+        if((order.className!="rest-list-btn")&&(order.className!="rest-list-btn-selected")) {
+            order[i].style.display = "none";
+        }
+    }
 }
