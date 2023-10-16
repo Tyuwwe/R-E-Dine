@@ -52,3 +52,7 @@ function hideorder(rest) {
         }
     }
 }
+
+document.getElementById("OrderBTN").addEventListener('click', () => {
+    window.REDAPI.openOrder();
+})

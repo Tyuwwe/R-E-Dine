@@ -27,13 +27,26 @@ const createWindow = () => {
         preload: path.join(__dirname, 'preload.js'),
         contextIsolation: true,
       }
-      })
-      indexwin.loadURL(path.join('file:',__dirname,'index.html'));
-      win.close();
-      ipcMain.on('index-close',function(){
-        indexwin.destroy();
-      }) 
+    })
+    indexwin.loadURL(path.join('file:',__dirname,'index.html'));
+    win.close();
+    ipcMain.on('index-close',function(){
+      indexwin.destroy();
+    }) 
       
+  })
+
+  ipcMain.on('window-order' ,function(){
+    const orderwin = new BrowserWindow({
+      width: 400,
+      height: 800,
+      frame: false,
+      webPreferences: {
+        preload: path.join(__dirname, 'preload.js'),
+        contextIsolation: true,
+      }
+    })
+    orderwin.loadURL(path.join('file:',__dirname,'order.html'));
   })
 
 }

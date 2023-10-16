@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>RED 点餐配送系统</title>
+  </head>
+  <body class="order-body">
+    <div class="drag-part"></div>
+    <div class="wrapper">
+        <div id="closeWindow" class="btn close-btn-order"></div>
+    </div>
+    <div class="map-box">
+        <img class="mapimg" src="./pic/example-map.png">
+    </div>
+    <div class="bkg-box">
+        <div class="info-box">
+            <div class="info-box-title">已选订单：</div>
+            <div class="info-box-text">距离 3.7km 预计送达用时 30分钟。</div>
+            <div class="info">Order#1</div>
+            <div class="info">Order#2</div>
+        </div>
+    </div>
+    <div class="check-box">
+        <div class="checkout">
+            <div class="price">34.99<f class="yuan"> 元</f></div>
+        </div>
+        <button class="checkBTN">确认</button>
+    </div>
+    <script src="./order-renderer.js"></script>
+  </body>
+</html>
