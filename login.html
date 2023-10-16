@@ -10,6 +10,7 @@
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>RED 点餐配送系统</title>
   </head>
@@ -18,14 +19,14 @@
     <div class="wrapper">
         <div id="closeWindow" class="btn close-btn"></div>
     </div>
-    <div class="login_L" id="left"></div>
     <div class="login_R" id="Right">
       <h3>RED 点餐配送系统</h3>
       <p class="font_s">登录页面</p>
       <p class="font_ss">账号：</p>
-      <input class="text_id" type="text" size="20" maxlength="30" value="Account">
+      <input class="text_id" type="text" size="20" maxlength="30" placeholder="输入手机号，电子邮箱或者用户ID">
       <p class="font_ss">密码：</p>
-      <input class="text_password" type="password" size="20" maxlength="30" value="Password">
+      <input class="text_password" type="password" size="20" maxlength="30" placeholder="输入你的密码">
+      <button id="signupBTN" class="SignupBTN">注册</button>
       <button id="loginBTN" class="LoginBTN">登录</button>
     </div>
     <script src="./renderer.js"></script>

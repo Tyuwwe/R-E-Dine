@@ -24,7 +24,7 @@ for (i = 0; i < restbtn.length; i++) {
         if( select.className == "rest-list-btn" ) {
             select.setAttribute("class", "rest-list-btn-selected");
             select.innerHTML = "Selected";
-            console.log(select.id);
+            //console.log(select.id);
             showorder(select.id);
         }
         else {

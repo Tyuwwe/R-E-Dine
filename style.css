@@ -1,50 +1,40 @@
-
 .login-body {
-    background:url("login-bkg.jpg")  no-repeat center center;
-    background-size:cover;
-    background-attachment:fixed;
-    background-color:#CCCCCC;
+    background-color: #f8cdb2;
 }
 
 .index-body {
-    background-color:#f8cdb2;
+    background-color: #f8cdb2;
 }
 
-h1 
-{
-    color:#ff6200;
+h1 {
+    color: #ff6200;
     font-size: 50px;
 }
 
-.right-title
-{
+.right-title {
     margin-left: 10%;
     margin-top: 0%;
 }
 
-.right-subtitle
-{
+.right-subtitle {
     margin-left: 10%;
     margin-top: -5%;
 }
 
-h2
-{
+h2 {
     color: #89512e;
     font-weight: lighter;
     font-size: 25px;
     margin-top: -10%;
 }
 
-.block-left
-{
+.block-left {
     width: 30%;
     float: left;
     margin-left: 10%;
 }
 
-.block-right
-{
+.block-right {
     width: 50%;
     float: right;
     margin-right: 10%;
@@ -58,9 +48,8 @@ h2
     margin-top: -1%;
 }
 
-.order-list
-{
-	display: none;
+.order-list {
+    display: none;
     height: 100px;
     width: 100px;
     float: left;
@@ -70,7 +59,7 @@ h2
     border-radius: 20px;
     margin-right: 1%;
     margin-top: 1%;
-	align-items: center;
+    align-items: center;
     justify-content: center;
     transition-duration: 0.4s;
 }
@@ -90,104 +79,111 @@ h2
     border-radius: 20px;
     margin-right: 1%;
     margin-top: 1%;
-	display:flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     transition-duration: 0.4s;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.login_L
-{
-    width: 60%;
-    height: 100%;
-    background-color: #ff6200;
-    float: left;
-    
-}
-
-.login_R
-{
+.login_R {
     position: absolute;
     width: 500px;
     height: 500px;
-    float: right;
     background-color: white;
-    text-align: left;
-    vertical-align: middle;
     border-radius: 20px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-h3
-{
+h3 {
     margin-left: 10%;
     margin-top: 10%;
     color: #ff6200;
     font-size: 25px;
 }
 
-.font_s
-{
-    margin-left: 10%;
+.font_s {
+    margin-left: 50px;
     margin-top: -5%;
     margin-bottom: 0%;
     color: #8b8b8b;
     font-size: 40px;
 }
 
-.font_ss
-{
-    width: 95%;
-    margin-left: 10%;
+.font_ss {
+    width: 400px;
+    margin-left: 50px;
     color: #8b8b8b;
     font-size: 20px;
 }
 
-.text_id
-{
-    width: 80%;
+.text_id,
+.text_password {
+    width: 356px;
     height: 40px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 50px;
+    border-color: #CCCCCC;
+    border-width: 2px;
+    border-style: solid;
+    transition-duration: 0.4s;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: gray;
 }
 
-.text_password
-{
-    width: 80%;
-    height: 40px;
-    margin-left: 10%;
-    margin-right: 10%;
+.text_id:focus,
+.text_password:focus {
+    outline: none;
+    border-color: #ff6200;
+    color: #ff6200;
 }
 
-.LoginBTN
-{
-    background-color:#f66f6a;
-    color:white;
-    width: 400px;
+.LoginBTN {
+    float: left;
+    background-color: #ff6200;
+    color: white;
+    width: 230px;
     height: 45px;
-    border:0;
+    border: 0;
     font-size: 16px;
-    box-sizing: content-box;				
-    border-radius: 5px;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 5%;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 40px;
+    transition-duration: 0.4s;
 }
 
-.LoginBTN:hover
-{
-    background-color: #a54b4a;
+.SignupBTN {
+    float: left;
+    background-color: #848484;
+    color: white;
+    width: 150px;
+    height: 45px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 40px;
+    transition-duration: 0.4s;
 }
 
-.closeBTN
-{
-    position:absolute;
-    top:0;
-    right:0;
+.LoginBTN:hover {
+    background-color: #cc5206;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.SignupBTN:hover {
+    background-color: #5b5b5b;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.closeBTN {
+    position: absolute;
+    top: 0;
+    right: 0;
     margin-right: 1%;
     margin-top: 1%;
     z-index: 999;
@@ -204,7 +200,7 @@ h3
     height: 30px;
     /* 拖拽 */
     -webkit-app-region: drag;
-  }
+}
 
 .btn {
     width: 24px;
@@ -223,7 +219,8 @@ h3
 }
 
 /* Close btn */
-.close-btn:before, .close-btn:after {
+.close-btn:before,
+.close-btn:after {
     width: 1px;
     height: 70%;
     background: #460100;
@@ -269,8 +266,8 @@ h3
     font-weight: bold;
     color: #CCCCCC;
     width: 90%;
-	display:flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     position: absolute;
 }
@@ -289,7 +286,7 @@ h3
     border-radius: 20px;
     float: left;
     z-index: 999;
-	display:flex;
+    display: flex;
     overflow: hidden;
 }
 
@@ -298,8 +295,8 @@ h3
     color: white;
     height: 100%;
     width: 100%;
-	display:flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     z-index: 999;
     font-weight: normal;
@@ -313,8 +310,8 @@ h3
     background-color: #ff6200;
     border: white;
     border-radius: 20px;
-	display:flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     color: white;
     transition-duration: 0.4s;
@@ -334,10 +331,10 @@ h3
     color: #ff6200;
     border: 2px solid #ff6200;
     border-radius: 20px;
-	display:flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     transition-duration: 0.4s;
 }
 
@@ -349,5 +346,5 @@ h3
     width: 100%;
     height: 5%;
     position: relative;
-	display:flex;
+    display: flex;
 }
