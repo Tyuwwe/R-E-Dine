@@ -2,15 +2,15 @@
 
     LOGO-DEMO-1
 
-    ![](D:/GIT PROJECTS/R-E-Dine/pic/logo/logo-demo-1.png)
+    ![](pic/logo/logo-demo-1.png)
 
     LOGO-DEMO-2
 
-    ![](D:/GIT PROJECTS/R-E-Dine/pic/logo/logo-demo-2.png)
+    ![](pic/logo/logo-demo-2.png)
 
     LOGO-DEMO-3
 
-    ![](D:/GIT PROJECTS/R-E-Dine/pic/logo/logo-demo-3.png)
+    ![](pic/logo/logo-demo-3.png)
 
     
 
