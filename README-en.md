@@ -16,7 +16,7 @@ LOGO-DEMO-3
 
 Example Restaurant Preorder & Takeaway System
 
-[中文](English)/English
+[中文](README.md)/English
 
 Built with **Node.js** v20.8.1 & **Electron** 26.4.0
 

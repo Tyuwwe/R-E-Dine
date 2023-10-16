@@ -16,7 +16,7 @@ LOGO-DEMO-3
 
 餐厅预订与外卖系统示例项目
 
-中文/[English](README.md)
+中文/[English](README-en.md)
 
 使用 **Node.js** v20.8.1 & **Electron** 26.4.0 搭建
 
