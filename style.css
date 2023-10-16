@@ -7,9 +7,7 @@
 }
 
 .index-body {
-    background:url("index-bkg.jpg")  no-repeat center center;
-    background-size:cover;
-    background-attachment:fixed;
+    background-color:#f8cdb2;
 }
 
 h1 
@@ -32,7 +30,7 @@ h1
 
 h2
 {
-    color: rgb(239, 239, 239);
+    color: #89512e;
     font-weight: lighter;
     font-size: 25px;
     margin-top: -10%;
@@ -65,13 +63,38 @@ h2
     height: 100px;
     width: 100px;
     float: left;
-    background-color: rgb(202, 202, 202);
+    background-color: white;
+    color: black;
+    border: 2px solid #ff6200;
     border-radius: 20px;
     margin-right: 1%;
     margin-top: 1%;
 	display:flex;
 	align-items: center;
     justify-content: center;
+    transition-duration: 0.4s;
+}
+
+.order-list:hover {
+    background-color: #ff6200;
+    color: white;
+}
+
+.order-list-clicked {
+    height: 100px;
+    width: 100px;
+    float: left;
+    background-color: #ff6200;
+    color: white;
+    border: 2px solid #ff6200;
+    border-radius: 20px;
+    margin-right: 1%;
+    margin-top: 1%;
+	display:flex;
+	align-items: center;
+    justify-content: center;
+    transition-duration: 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .login_L
@@ -183,7 +206,7 @@ h3
     -webkit-app-region: drag;
   }
 
-  .btn {
+.btn {
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -222,14 +245,27 @@ h3
     position: absolute;
 }
 
+.rest-pic {
+    width: 100%;
+    margin-left: -100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+}
+
+.rest-pic:hover {
+    filter: blur(10px);
+}
+
 .rest-title {
     margin-left: 5%;
     margin-right: 5%;
 }
 
 .rest-title-font {
-    margin-top: 5%;
     font-size: 3vw;
+    margin-top: 5%;
     font-weight: bold;
     color: #CCCCCC;
     width: 90%;
@@ -249,35 +285,69 @@ h3
 .rest-list-case {
     width: 65%;
     height: 50%;
-    margin-top: 5%;
     margin-right: 5%;
-    background-color: #d7d7d7;
     border-radius: 20px;
     float: left;
     z-index: 999;
+	display:flex;
+    overflow: hidden;
 }
 
 .rest-list-title {
-    font-size: 2vw;
+    font-size: 1.8vw;
+    color: white;
     height: 100%;
     width: 100%;
 	display:flex;
 	align-items: center;
     justify-content: center;
+    z-index: 999;
+    font-weight: normal;
+    pointer-events: none;
 }
 
 .rest-list-btn {
     float: left;
     width: 30%;
     height: 50%;
-    margin-top: 5%;
-    background-color: #f66f6a;
+    background-color: #ff6200;
+    border: white;
     border-radius: 20px;
 	display:flex;
 	align-items: center;
     justify-content: center;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.rest-list-btn:hover {
+    background-color: white;
+    color: #ff6200;
+    border: 2px solid #ff6200;
+}
+
+.rest-list-btn-selected {
+    float: left;
+    width: 30%;
+    height: 50%;
+    background-color: white;
+    color: #ff6200;
+    border: 2px solid #ff6200;
+    border-radius: 20px;
+	display:flex;
+	align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.4s;
 }
 
 .empty {
-    height: 30%;
+    height: 35%;
+}
+
+.empty5 {
+    width: 100%;
+    height: 5%;
+    position: relative;
+	display:flex;
 }
