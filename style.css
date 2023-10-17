@@ -399,7 +399,7 @@ h3 {
 
 .mapimg {
     width: 100%;
-    height: auto;
+    height: 300px;
     object-fit: cover;
     z-index: -1;
     transition-duration: 0.1s;
