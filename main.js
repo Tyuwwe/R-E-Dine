@@ -12,7 +12,15 @@ const createWindow = () => {
     }
   })
 
-  win.loadFile('login.html')
+  win.loadFile('login.html');
+
+  ipcMain.on('user-signup',function(){
+    win.loadFile('signup.html');
+  })
+
+  ipcMain.on('user-login',function(){
+    win.loadFile('login.html');
+  })
 
   ipcMain.on('window-close',function(){
     app.quit();

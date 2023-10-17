@@ -547,3 +547,155 @@ h3 {
     color: #ff6200;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
+
+/*signup.html*/
+.signup_id,
+.signup_password {
+    width: 356px;
+    height: 40px;
+    margin-left: 50px;
+    border-color: #CCCCCC;
+    border-width: 2px;
+    border-style: solid;
+    transition-duration: 0.4s;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.signup_id:focus,
+.signup_password:focus {
+    outline: none;
+    border-color: #ff6200;
+    color: #ff6200;
+}
+
+.signup_drop {
+    width: 150px;
+    height: 30px;
+    margin-left: 50px;
+    margin-bottom: 0;
+}
+
+.dropbtn {
+    background-color: #ffffff00;
+    border: none;
+    font-size: 20px;
+    color: #8b8b8b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    transition-duration: 0.4s;
+}
+.dropdown-content {
+    display: block;
+    position: absolute;
+    min-width: 100px;
+    margin-left: 50px;
+    height: 0px;
+}
+
+.dropdown-content button {
+    color: #8b8b8b;
+    background-color: white;
+    padding: 10px 10px;
+    height: 45px;
+    width: 150px;
+    border: 2px solid #ff6200;
+    font-size: 15px;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 50px;
+    text-align: center;
+    transition-duration: 0.4s;
+    transform: scale(0);
+    font-weight: lighter;
+}
+
+.dropdown-content button:hover {
+    background-color: #ff6200;
+    color: white;
+    font-weight: bold;
+}
+/*
+.signup_drop:hover +.dropdown-content {
+    display: block;
+}
+
+.dropdown-content:hover {
+    display: block;
+}
+*/
+.Signup_PageBTN {
+    float: left;
+    background-color: #ff6200;
+    color: white;
+    width: 400px;
+    height: 45px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 40px;
+    transition-duration: 0.4s;
+}
+
+.Signup_PageBTN:hover {
+    background-color: #cc5206;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dropSVG {
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    transform: rotate(-90deg);
+    filter: invert(50%) sepia(37%) saturate(9%) hue-rotate(344deg) brightness(101%) contrast(94%);
+    transition-duration: 0.4s;
+    margin-left: -15px;
+}
+
+.font_password {
+    width: 400px;
+    color: #8b8b8b;
+    font-size: 20px;
+}
+
+.passSVG {
+    height: 25px;
+    width: 25px;
+    filter: invert(50%) sepia(37%) saturate(9%) hue-rotate(344deg) brightness(101%) contrast(94%);
+    transition-duration: 0.4s;
+    margin-top: 10px;
+    margin-left: 6px;
+    margin-right: 5px;
+    transform: translateY(5px);
+}
+
+.pass-box {
+    position: relative;
+    padding: 0;
+    width: auto;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    z-index: -1;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.empty10px {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 10px;
+}
