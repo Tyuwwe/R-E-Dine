@@ -1,5 +1,19 @@
+:root {
+    --main-orange: #ff6200;
+    --deep-orange: #cc5206;
+    --dark-orange: #89512e;
+    --main-bkg: #ffe7d8;
+    --second-bkg: #ffefe5;
+    --light-gray: #8b8b8b;
+    --lighter-gray: #CCCCCC;
+    --bright-gray: #f0f0f0;
+    --deep-gray: #5b5b5b;
+    --pure-white: white;
+    --pure-black: black;
+}
+
 .login-body, .index-body, .order-body {
-    background-color: #ffe7d8;
+    background-color: var(--main-bkg);
 }
 
 div, img {
@@ -12,7 +26,7 @@ div, img {
 }
 
 h1 {
-    color: #ff6200;
+    color: var(--main-orange);
     font-size: 50px;
 }
 
@@ -21,7 +35,7 @@ h1 {
 }
 
 .right-subtitle {
-    color: #89512e;
+    color: var(--dark-orange);
     font-weight: lighter;
     font-size: 25px;
     margin-left: 10%;
@@ -29,7 +43,7 @@ h1 {
 }
 
 .left-subtitle {
-    color: #89512e;
+    color: var(--dark-orange);
     font-weight: lighter;
     font-size: 25px;
     margin-top: -40px;
@@ -60,9 +74,9 @@ h1 {
     height: 100px;
     width: 100px;
     float: left;
-    background-color: white;
-    color: black;
-    border: 2px solid #ff6200;
+    background-color: var(--pure-white);
+    color: var(--pure-black);
+    border: 2px solid var(--main-orange);
     border-radius: 20px;
     margin-right: -100%;
     margin-top: 1%;
@@ -73,17 +87,17 @@ h1 {
 }
 
 .order-list:hover {
-    background-color: #ff6200;
-    color: white;
+    background-color: var(--main-orange);
+    color: var(--pure-white);
 }
 
 .order-list-clicked {
     height: 100px;
     width: 100px;
     float: left;
-    background-color: #ff6200;
-    color: white;
-    border: 2px solid #ff6200;
+    background-color: var(--main-orange);
+    color: var(--pure-white);
+    border: 2px solid var(--main-orange);
     border-radius: 20px;
     margin-right: 1%;
     margin-top: 1%;
@@ -98,7 +112,7 @@ h1 {
     position: absolute;
     width: 500px;
     height: 500px;
-    background-color: white;
+    background-color: var(--pure-white);
     border-radius: 20px;
     top: 50%;
     left: 50%;
@@ -109,7 +123,7 @@ h1 {
 h3 {
     margin-left: 10%;
     margin-top: 10%;
-    color: #ff6200;
+    color: var(--main-orange);
     font-size: 25px;
 }
 
@@ -117,14 +131,14 @@ h3 {
     margin-left: 50px;
     margin-top: -5%;
     margin-bottom: 0%;
-    color: #8b8b8b;
+    color: var(--light-gray);
     font-size: 40px;
 }
 
 .font_ss {
     width: 400px;
     margin-left: 50px;
-    color: #8b8b8b;
+    color: var(--light-gray);
     font-size: 20px;
 }
 
@@ -133,28 +147,28 @@ h3 {
     width: 356px;
     height: 40px;
     margin-left: 50px;
-    border-color: #CCCCCC;
+    border-color: var(--lighter-gray);
     border-width: 2px;
     border-style: solid;
     transition-duration: 0.4s;
     border-radius: 30px;
     padding-left: 20px;
     padding-right: 20px;
-    color: gray;
+    color: var(--light-gray);
 }
 
 .text_id:focus,
 .text_password:focus {
     outline: none;
-    border-color: #ff6200;
-    color: #ff6200;
+    border-color: var(--main-orange);
+    color: var(--main-orange);
     box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
 }
 
 .LoginBTN {
     float: left;
-    background-color: #ff6200;
-    color: white;
+    background-color: var(--main-orange);
+    color: var(--pure-white);
     width: 230px;
     height: 45px;
     border: 0;
@@ -167,8 +181,8 @@ h3 {
 
 .SignupBTN {
     float: left;
-    background-color: #848484;
-    color: white;
+    background-color: var(--light-gray);
+    color: var(--pure-white);
     width: 150px;
     height: 45px;
     border: 0;
@@ -180,12 +194,12 @@ h3 {
 }
 
 .LoginBTN:hover {
-    background-color: #cc5206;
+    background-color: var(--deep-orange);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .SignupBTN:hover {
-    background-color: #5b5b5b;
+    background-color: var(--deep-gray);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -237,7 +251,7 @@ h3 {
 }
 
 .rest-list {
-    background-color: white;
+    background-color: var(--pure-white);
     height: 60%;
     width: 30%;
     border-radius: 30px;
@@ -266,7 +280,7 @@ h3 {
     font-size: 3vw;
     margin-top: 5%;
     font-weight: bold;
-    color: #CCCCCC;
+    color: var(--lighter-gray);
     width: 90%;
     display: flex;
     align-items: center;
@@ -294,7 +308,7 @@ h3 {
 
 .rest-list-title {
     font-size: 1.8vw;
-    color: white;
+    color: var(--pure-white);
     height: 100%;
     width: 100%;
     display: flex;
@@ -309,29 +323,29 @@ h3 {
     float: left;
     width: 30%;
     height: 50%;
-    background-color: #ff6200;
-    border: white;
+    background-color: var(--main-orange);
+    border: var(--pure-white);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--pure-white);
     transition-duration: 0.4s;
 }
 
 .rest-list-btn:hover {
-    background-color: white;
-    color: #ff6200;
-    border: 2px solid #ff6200;
+    background-color: var(--pure-white);
+    color: var(--main-orange);
+    border: 2px solid var(--main-orange);
 }
 
 .rest-list-btn-selected {
     float: left;
     width: 30%;
     height: 50%;
-    background-color: white;
-    color: #ff6200;
-    border: 2px solid #ff6200;
+    background-color: var(--pure-white);
+    color: var(--main-orange);
+    border: 2px solid var(--main-orange);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -356,21 +370,21 @@ h3 {
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-    background-color: white;
-    color: #ff6200;
-    border: 2px solid #ff6200;
+    background-color: var(--pure-white);
+    color: var(--main-orange);
+    border: 2px solid var(--main-orange);
     transition-duration: 0.4s;
 }
 
 .orderBTN:hover {
-    color: white;
+    color: var(--pure-white);
     font-size: 30px;
-    background-color: #ff6200;
+    background-color: var(--main-orange);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .orderBTN:active {
-    background-color: #cc5206;
+    background-color: var(--deep-orange);
 }
 
 .empty {
@@ -411,7 +425,7 @@ h3 {
 }
 
 .bkg-box {
-    background-color: #f1dacb;
+    background-color: var(--second-bkg);
     box-shadow: 0px 0px 12px 12px rgba(0, 0, 0, 0.24), 0 12px 30px 0 rgba(0, 0, 0, 0.19);
     width: 100%;
     height: auto;
@@ -432,7 +446,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: var(--pure-white);
     border-radius: 20px;
     margin-bottom: 10px;
     padding-left: 5%;
@@ -441,7 +455,7 @@ h3 {
 }
 
 .info:hover {
-    background-color: #f0f0f0;
+    background-color: var(--bright-gray);
     transform: scale(1.1);
     box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.24), 0 6px 6px 0 rgba(0, 0, 0, 0.19);
 }
@@ -466,7 +480,7 @@ h3 {
 }
 
 .info-box-tag {
-    color: #ff6200;
+    color: var(--main-orange);
     font-weight: bold;
     margin-left: 5px;
     margin-right: 5px;
@@ -520,11 +534,11 @@ h3 {
 .yuan {
     font-size: 20px;
     font-weight: bold;
-    color: #ff6200;
+    color: var(--main-orange);
 }
 
 .yuan-info {
-    color:#ff6200;
+    color:var(--main-orange);
 }
 
 .checkBTN {
@@ -537,15 +551,15 @@ h3 {
     font-size: 30px;
     font-weight: bold;
     border-radius: 20px;
-    background-color: #ff6200;
-    color: #ffffff;
-    border: 2px solid #ff6200;
+    background-color: var(--main-orange);
+    color: var(--pure-white);
+    border: 2px solid var(--main-orange);
     transition-duration: 0.4s;
 }
 
 .checkBTN:hover {
-    background-color:white;
-    color: #ff6200;
+    background-color:var(--pure-white);
+    color: var(--main-orange);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -555,7 +569,7 @@ h3 {
     width: 356px;
     height: 40px;
     margin-left: 50px;
-    border-color: #CCCCCC;
+    border-color: var(--lighter-gray);
     border-width: 2px;
     border-style: solid;
     transition-duration: 0.4s;
@@ -568,8 +582,8 @@ h3 {
 .signup_id:focus,
 .signup_password:focus {
     outline: none;
-    border-color: #ff6200;
-    color: #ff6200;
+    border-color: var(--main-orange);
+    color: var(--main-orange);
     box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
 }
 
@@ -581,10 +595,10 @@ h3 {
 }
 
 .dropbtn {
-    background-color: #ffffff00;
+    background-color: transparent;
     border: none;
     font-size: 20px;
-    color: #8b8b8b;
+    color: var(--light-gray);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -610,12 +624,12 @@ h3 {
 }
 
 .dropdown-content button {
-    color: #8b8b8b;
-    background-color: white;
+    color: var(--light-gray);
+    background-color: var(--pure-white);
     padding: 10px 10px;
     height: 45px;
     width: 150px;
-    border: 2px solid #ff6200;
+    border: 2px solid var(--main-orange);
     font-size: 15px;
     text-decoration: none;
     display: block;
@@ -629,8 +643,8 @@ h3 {
 }
 
 .dropdown-content button:hover {
-    background-color: #ff6200;
-    color: white;
+    background-color: var(--main-orange);
+    color: var(--pure-white);
     font-weight: bold;
 }
 /*
@@ -644,8 +658,8 @@ h3 {
 */
 .Signup_PageBTN {
     float: left;
-    background-color: #ff6200;
-    color: white;
+    background-color: var(--main-orange);
+    color: var(--pure-white);
     width: 400px;
     height: 45px;
     border: 0;
@@ -657,7 +671,7 @@ h3 {
 }
 
 .Signup_PageBTN:hover {
-    background-color: #cc5206;
+    background-color: var(--deep-orange);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -675,7 +689,7 @@ h3 {
 
 .font_password {
     width: 400px;
-    color: #8b8b8b;
+    color: var(--light-gray);
     font-size: 20px;
 }
 

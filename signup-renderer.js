@@ -20,7 +20,7 @@ document.getElementById('dropBTN').addEventListener('click', () => {
         btn[i].style.transform = "scale(0)";
         document.getElementById('dropSVG').style.transform = "rotate(-90deg)";
         document.getElementById('dropdown-content').style.height = "0px";
-        document.getElementById('dropBTN').style.backgroundColor = "#ffffff00";
+        document.getElementById('dropBTN').style.backgroundColor = "transparent";
         document.getElementById('dropBTN').style.color = "#8b8b8b";
         document.getElementById('dropSVG').style.filter = "invert(50%) sepia(37%) saturate(9%) hue-rotate(344deg) brightness(101%) contrast(94%)";
     }
@@ -35,7 +35,7 @@ for(i = 0; i < dropBTNs.length; i++) {
         }
         document.getElementById('dropdown-content').style.height = "0px";
         document.getElementById('dropSVG').style.transform = "rotate(-90deg)";
-        document.getElementById('dropBTN').style.backgroundColor = "#ffffff00";
+        document.getElementById('dropBTN').style.backgroundColor = "transparent";
         document.getElementById('dropBTN').style.color = "#8b8b8b";
         document.getElementById('dropSVG').style.filter = "invert(50%) sepia(37%) saturate(9%) hue-rotate(344deg) brightness(101%) contrast(94%)";
     })
