@@ -56,3 +56,22 @@ document.getElementById('dropdown-content').addEventListener('mouseover', () => 
 document.getElementById('signupBTN').addEventListener('click', () => {
     window.REDAPI.login();
 })
+
+var swithcBTNs = document.getElementsByClassName('drop-list-button');
+for(i = 0; i < swithcBTNs.length; i++) {
+    if(swithcBTNs[i].id == 'use_phoneBTN') {
+        swithcBTNs[i].addEventListener('click', () => {
+            window.REDAPI.signup_reload_phone();
+        })
+    }
+    else if (swithcBTNs[i].id == 'use_IDBTN') {
+        swithcBTNs[i].addEventListener('click', () => {
+            window.REDAPI.signup_reload_id();
+        })
+    }
+    else if (swithcBTNs[i].id == 'use_emailBTN') {
+        swithcBTNs[i].addEventListener('click', () => {
+            window.REDAPI.signup_reload_email();
+        })
+    }
+}

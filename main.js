@@ -22,6 +22,18 @@ const createWindow = () => {
     win.loadFile('login.html');
   })
 
+  ipcMain.on('signup_reload_phone',function(){
+    win.loadFile('signup-phone.html');
+  })
+
+  ipcMain.on('signup_reload_email',function(){
+    win.loadFile('signup.html');
+  })
+
+  ipcMain.on('signup_reload_id',function(){
+    win.loadFile('signup-id.html');
+  })
+
   ipcMain.on('window-close',function(){
     app.quit();
   }) 

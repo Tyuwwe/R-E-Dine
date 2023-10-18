@@ -148,6 +148,7 @@ h3 {
     outline: none;
     border-color: #ff6200;
     color: #ff6200;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
 }
 
 .LoginBTN {
@@ -569,6 +570,7 @@ h3 {
     outline: none;
     border-color: #ff6200;
     color: #ff6200;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
 }
 
 .signup_drop {
@@ -585,12 +587,20 @@ h3 {
     color: #8b8b8b;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     border-radius: 20px;
-    width: 120px;
+    width: 150px;
     height: 40px;
     transition-duration: 0.4s;
+    padding-left: 22px;
 }
+
+.dropbtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
 .dropdown-content {
     display: block;
     position: absolute;

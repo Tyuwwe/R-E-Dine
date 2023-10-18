@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>RED 点餐配送系统</title>
+  </head>
+  <body class="login-body">
+    <div class="drag-part"></div>
+    <div class="wrapper">
+        <div id="closeWindow" class="btn close-btn"></div>
+    </div>
+    <div class="login_R" id="Right">
+      <h3>RED 点餐配送系统</h3>
+      <p class="font_s">注册页面</p>
+      <p class="signup_drop">
+        <button id="dropBTN" class="dropbtn"><img id="dropSVG" class="dropSVG" src="./assets/dropbtn.svg"/>用户ID：</button>
+        <div id="dropdown-content" class ="dropdown-content">
+          <div class="empty10px"></div>
+          <button id="use_phoneBTN" class="drop-list-button">使用手机号注册</button>
+          <button id="use_emailBTN" class="drop-list-button">使用邮箱注册</button>
+        </div>
+      </p>
+      <input class="signup_id" type="text" size="20" maxlength="30" placeholder="请输入注册使用的用户ID">
+      <div class="pass-box">
+        <p class="font_password"><img class="passSVG" src="./assets/password.svg"/>密码：</p>
+      </div>
+      <input class="signup_password" type="password" size="20" maxlength="30" placeholder="输入你的密码">
+      <button id="signupBTN" class="Signup_PageBTN">注册</button>
+    </div>
+    <script src="./signup-renderer.js"></script>
+  </body>
+</html>
