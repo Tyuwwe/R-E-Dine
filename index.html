@@ -10,13 +10,14 @@
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <title>RED 点餐配送系统</title>
   </head>
   <body class="index-body">
     <div class="drag-part"></div>
     <div class="wrapper">
         <div id="closeIndexWindow" class="btn close-btn"></div>
+        <div id="modeswitch" class="btn darkmode-btn"></div>
     </div>
     <div class="block-left">
       <h1>RED</h1>
@@ -29,13 +30,13 @@
           <div class="empty"></div>
           <div class="rest-list-case">
             <r class="rest-list-title">French Restaurant</r>
-            <img class="rest-pic" src="./pic/rest01.jpg" alt="image"></img>
+            <img class="rest-pic" src="./assets/pic/rest01.jpg" alt="image"></img>
           </div>
           <button id="rest1" class="rest-list-btn">Select</button>
           <div class="empty5"></div>
           <div class="rest-list-case">
             <r class="rest-list-title">Italian Restaurant</r>
-            <img class="rest-pic" src="./pic/rest02.jpg" alt="image"></img>
+            <img class="rest-pic" src="./assets/pic/rest02.jpg" alt="image"></img>
           </div>
           <button id="rest2" class="rest-list-btn">Select</button>
         </div>
@@ -63,5 +64,6 @@
       </div>
     </div>
   </body>
-  <script src="./index-renderer.js"></script>
+  <script src="./js/index-renderer.js"></script>
+  <script src="./js/general-functions.js"></script>
 </html>

@@ -10,16 +10,17 @@
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <title>RED 点餐配送系统</title>
   </head>
   <body class="order-body">
     <div class="drag-part"></div>
     <div class="wrapper">
         <div id="closeWindow" class="btn close-btn"></div>
+        <div id="modeswitch" class="btn darkmode-btn"></div>
     </div>
     <div id='map-box' class="map-box">
-        <img id="map-img" class="mapimg" src="./pic/example-map.png">
+        <img id="map-img" class="mapimg" src="./assets/pic/example-map.png">
     </div>
     <div class="bkg-box">
         <div class="info-box">
@@ -61,6 +62,7 @@
         </div>
         <button class="checkBTN">确认</button>
     </div>
-    <script src="./order-renderer.js"></script>
+    <script src="./js/order-renderer.js"></script>
+    <script src="./js/general-functions.js"></script>
   </body>
 </html>

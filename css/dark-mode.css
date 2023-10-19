@@ -1,0 +1,13 @@
+:root {
+    --main-orange: #ff6200;
+    --deep-orange: #ceb9ab;
+    --dark-orange: #f8eae1;
+    --main-bkg: #444444;
+    --second-bkg: #5f5f5f;
+    --light-gray: #858585;
+    --lighter-gray: #424242;
+    --bright-gray: #2b2b2b;
+    --deep-gray: #a8a8a8;
+    --pure-white: rgb(40, 40, 40);
+    --pure-black: white;
+}

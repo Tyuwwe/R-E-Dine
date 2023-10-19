@@ -14,6 +14,7 @@
 
 .login-body, .index-body, .order-body {
     background-color: var(--main-bkg);
+    transition-duration: 0.4s;
 }
 
 div, img {
@@ -118,6 +119,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.4s;
 }
 
 h3 {
@@ -155,6 +157,7 @@ h3 {
     padding-left: 20px;
     padding-right: 20px;
     color: var(--light-gray);
+    background-color: var(--pure-white);
 }
 
 .text_id:focus,
@@ -239,8 +242,8 @@ h3 {
 .close-btn {
     background: #FF5D5B;
     border: 1px solid #CF544D;
-    top: 2%;
-    right: 2%;
+    top: 20px;
+    right: 20px;
     transition-duration: 0.4s;
 }
 
@@ -250,12 +253,41 @@ h3 {
     box-shadow: 0 0px 16px 0 rgba(0, 0, 0, 0.24), 0 12px 24px 0 rgba(0, 0, 0, 0.19);
 }
 
+.darkmode-btn {
+    background: #3b3b3b;
+    border: 1px solid #3b3b3b;
+    top: 20px;
+    right: 50px;
+    transition-duration: 0.4s;
+}
+
+.darkmode-btn:hover {
+    transform: scale(1.1);
+    background: #686868;
+    box-shadow: 0 0px 16px 0 rgba(0, 0, 0, 0.24), 0 12px 24px 0 rgba(0, 0, 0, 0.19);
+}
+
+.lightmode-btn {
+    background: #dfdfdf;
+    border: 1px solid #bbbbbb;
+    top: 20px;
+    right: 50px;
+    transition-duration: 0.4s;
+}
+
+.lightmode-btn:hover {
+    transform: scale(1.1);
+    background: #b3b3b3;
+    box-shadow: 0 0px 16px 0 rgba(0, 0, 0, 0.24), 0 12px 24px 0 rgba(0, 0, 0, 0.19);
+}
+
 .rest-list {
     background-color: var(--pure-white);
     height: 60%;
     width: 30%;
     border-radius: 30px;
     position: absolute;
+    transition-duration: 0.4s;
 }
 
 .rest-pic {
@@ -433,6 +465,7 @@ h3 {
     padding-bottom: 10px;
     z-index: 999;
     margin-top: 200px;
+    transition-duration: 0.4s;
 }
 
 .info-box {
@@ -467,6 +500,7 @@ h3 {
     display: flex;
     align-items: center;
     font-weight: lighter;
+    color: var(--pure-black);
 }
 
 .info-box-text {
@@ -477,6 +511,7 @@ h3 {
     align-items: center;
     font-weight: lighter;
     margin-bottom: 15px;
+    color: var(--pure-black);
 }
 
 .info-box-tag {
@@ -494,17 +529,20 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--pure-black);
 }
 
 .info-list-price {
     font-weight: bold;
     font-size: 14px;
+    color: var(--pure-black);
 }
 
 .info-rest {
     width: 100%;
     font-size: 12px;
     font-weight: lighter;
+    color: var(--pure-black);
 }
 
 .check-box {
@@ -529,6 +567,7 @@ h3 {
 .price {
     font-weight: lighter;
     font-size: 45px;
+    color: var(--pure-black);
 }
 
 .yuan {
@@ -576,7 +615,7 @@ h3 {
     border-radius: 30px;
     padding-left: 20px;
     padding-right: 20px;
-    
+    background-color: var(--pure-white);
 }
 
 .signup_id:focus,

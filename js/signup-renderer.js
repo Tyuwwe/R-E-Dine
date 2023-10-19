@@ -8,7 +8,7 @@ document.getElementById('dropBTN').addEventListener('mouseover', () => {
         btn[i].style.transform = "scale(1)";
         document.getElementById('dropSVG').style.transform = "rotate(0deg)";
         document.getElementById('dropdown-content').style.height = "65px";
-        document.getElementById('dropBTN').style.backgroundColor = "#ff6200";
+        document.getElementById('dropBTN').style.backgroundColor = "var(--main-orange)";
         document.getElementById('dropBTN').style.color = "white";
         document.getElementById('dropSVG').style.filter = "invert(1)";
     }
@@ -21,7 +21,7 @@ document.getElementById('dropBTN').addEventListener('click', () => {
         document.getElementById('dropSVG').style.transform = "rotate(-90deg)";
         document.getElementById('dropdown-content').style.height = "0px";
         document.getElementById('dropBTN').style.backgroundColor = "transparent";
-        document.getElementById('dropBTN').style.color = "#8b8b8b";
+        document.getElementById('dropBTN').style.color = "var(--light-gray)";
         document.getElementById('dropSVG').style.filter = "invert(50%) sepia(37%) saturate(9%) hue-rotate(344deg) brightness(101%) contrast(94%)";
     }
 })
@@ -36,7 +36,7 @@ for(i = 0; i < dropBTNs.length; i++) {
         document.getElementById('dropdown-content').style.height = "0px";
         document.getElementById('dropSVG').style.transform = "rotate(-90deg)";
         document.getElementById('dropBTN').style.backgroundColor = "transparent";
-        document.getElementById('dropBTN').style.color = "#8b8b8b";
+        document.getElementById('dropBTN').style.color = "var(--light-gray)";
         document.getElementById('dropSVG').style.filter = "invert(50%) sepia(37%) saturate(9%) hue-rotate(344deg) brightness(101%) contrast(94%)";
     })
 }
@@ -47,7 +47,7 @@ document.getElementById('dropdown-content').addEventListener('mouseover', () => 
         btn[i].style.transform = "scale(1)";
         document.getElementById('dropSVG').style.transform = "rotate(0deg)";
         document.getElementById('dropdown-content').style.height = "65px";
-        document.getElementById('dropBTN').style.backgroundColor = "#ff6200";
+        document.getElementById('dropBTN').style.backgroundColor = "var(--main-orange)";
         document.getElementById('dropBTN').style.color = "white";
         document.getElementById('dropSVG').style.filter = "invert(1)";
     }
