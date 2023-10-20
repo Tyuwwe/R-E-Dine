@@ -1,7 +1,3 @@
-document.getElementById('closeWindow').addEventListener('click', () => {
-    window.REDAPI.close();
-})
-
 document.getElementById('loginBTN').addEventListener('click', () => {
     window.REDAPI.openIndex();
 })

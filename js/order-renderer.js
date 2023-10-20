@@ -1,7 +1,3 @@
-document.getElementById('closeWindow').addEventListener('click', () => {
-    window.close();
-})
-
 const picbox = document.getElementById("map-box");
 const pic = document.getElementById("map-img");
 picbox.onmousemove = function(e) {

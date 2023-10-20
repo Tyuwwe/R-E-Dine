@@ -1,7 +1,3 @@
-document.getElementById('closeWindow').addEventListener('click', () => {
-    window.close();
-})
-
 document.getElementById('dropBTN').addEventListener('mouseover', () => {
     var btn = document.getElementsByClassName('drop-list-button');
     for(i = 0; i < btn.length; i++) {

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./css/dining.css">
+    <title>RED 点餐配送系统 | 商家服务</title>
+  </head>
+  <body class="dining-body">
+    <div class="drag-part"></div>
+    <div class="wrapper">
+        <div id="closeWindow" class="btn close-btn"></div>
+        <div id="modeswitch" class="btn darkmode-btn"></div>
+    </div>
+    <div class="box-left">
+        <div class="float float-box-left">
+            <div class="title title-left">餐品列表</div>
+            <div class="subtitle subtitle-left">R-E-Dine 后台管理系统</R-E-Dine></div>
+            <div class="list food-list">
+                <div class="food"></div>
+                <div class="food"></div>
+                <div class="food"></div>
+            </div>
+        </div>
+    </div>
+    <div class="box-right">
+        <div class="float float-box-right">
+            <div class="title title-right">控制台</div>
+            <div class="subtitle subtitle-right">调整你的上架菜品</div>
+            <div class="list btn-list">
+                <button class="listbtn btn-add">添加新的菜品</button>
+                <button class="listbtn btn-del">删除已有菜品</button>
+                <button class="listbtn tag-edit">编辑已有菜品</button>
+            </div>
+        </div>
+    </div>
+  </body>
+  <script src="./js/index-renderer.js"></script>
+  <script src="./js/general-functions.js"></script>
+</html>

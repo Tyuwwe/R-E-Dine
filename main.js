@@ -33,10 +33,6 @@ const createWindow = () => {
   ipcMain.on('signup_reload_id',function(){
     win.loadFile('signup-id.html');
   })
-
-  ipcMain.on('window-close',function(){
-    app.quit();
-  }) 
   
   ipcMain.on('window-index', function(){
     const indexwin = new BrowserWindow({
@@ -50,10 +46,6 @@ const createWindow = () => {
     })
     indexwin.loadURL(path.join('file:',__dirname,'index.html'));
     win.close();
-    ipcMain.on('index-close',function(){
-      indexwin.destroy();
-    }) 
-      
   })
 
   ipcMain.on('window-order' ,function(){

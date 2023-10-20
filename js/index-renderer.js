@@ -1,9 +1,3 @@
-document.getElementById('closeIndexWindow').addEventListener('click', () => {
-    //window.close();
-    //console.log("func1");
-    window.REDAPI.closeindex();
-})
-
 var orderbtn = document.getElementsByClassName('order-list');
 for (i = 0; i < orderbtn.length; i++) {
     orderbtn[i].addEventListener('click', (btn) => {

@@ -22,6 +22,11 @@ document.getElementById("modeswitch").addEventListener('click', () => {
         document.getElementById("modeswitch").className = 'btn darkmode-btn';
     }
 })
+
+document.getElementById('closeWindow').addEventListener('click', () => {
+    window.close();
+})
+
 /*
 const isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)"); // 是深色
 if (isDarkTheme.matches) { // 是深色
