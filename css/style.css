@@ -281,6 +281,20 @@ h3 {
     box-shadow: 0 0px 16px 0 rgba(0, 0, 0, 0.24), 0 12px 24px 0 rgba(0, 0, 0, 0.19);
 }
 
+.merchant-btn {
+    background: #2ac798;
+    border: 1px solid #07d295;
+    top: 20px;
+    right: 80px;
+    transition-duration: 0.4s;
+}
+
+.merchant-btn:hover {
+    transform: scale(1.1);
+    background: #027653;
+    box-shadow: 0 0px 16px 0 rgba(0, 0, 0, 0.24), 0 12px 24px 0 rgba(0, 0, 0, 0.19);
+}
+
 .rest-list {
     background-color: var(--pure-white);
     height: 60%;
@@ -678,7 +692,7 @@ h3 {
     text-align: center;
     transition-duration: 0.4s;
     transform: scale(0);
-    font-weight: lighter;
+    font-weight: normal;
 }
 
 .dropdown-content button:hover {

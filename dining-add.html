@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; img-src 'self' blob: data:"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; img-src 'self' blob: data:"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./css/dining.css">
+    <title>RED 点餐配送系统 | 商家服务 添加菜品</title>
+  </head>
+  <body class="dining-body">
+    <div class="drag-part"></div>
+    <div class="wrapper">
+        <div id="closeWindow" class="btn close-btn"></div>
+        <div id="modeswitch" class="btn darkmode-btn"></div>
+    </div>
+    <div class="box-add">
+        <div class="float float-box-add">
+            <div class="title title-left">新增餐品</div>
+            <div class="subtitle subtitle-left">R-E-Dine 后台管理系统</R-E-Dine></div>
+            <div class="list food-add-list">
+                <div class="add-title">餐品名称</div>
+                <input id="f_name" class="food-add">
+                <div class="add-title">餐品售价</div>
+                <input id="f_price" class="food-add">
+                <div class="add-title">餐品数量</div>
+                <input id="f_count" class="food-add">
+                <div class="add-title">餐品图片</div>
+                <img id="f_addpic-img" class="addpic-img" src="./assets/pic/food.jpg">
+                <label for="f_addpic" class="addpicBTN">点击选择图片上传</label>
+                <input type="file" id="f_addpic" class="addpic"/>
+                <button class="addBTN">提交</button>
+            </div>
+        </div>
+    </div>
+  </body>
+  <script src="./js/dining-add-renderer.js"></script>
+  <script src="./js/general-functions.js"></script>
+</html>

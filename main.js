@@ -33,6 +33,33 @@ const createWindow = () => {
   ipcMain.on('signup_reload_id',function(){
     win.loadFile('signup-id.html');
   })
+
+  ipcMain.on('debug_reload_merchant', function(){
+    const diningwin = new BrowserWindow({
+      width: 960,
+      height: 540,
+      frame: false,
+      webPreferences: {
+        preload: path.join(__dirname, 'preload.js'),
+        contextIsolation: true,
+      }
+    })
+    diningwin.loadURL(path.join('file:',__dirname,'dining-index.html'));
+    win.close();
+  })
+
+  ipcMain.on('debug_reload_merchant_add', function(){
+    const diningwin = new BrowserWindow({
+      width: 400,
+      height: 800,
+      frame: false,
+      webPreferences: {
+        preload: path.join(__dirname, 'preload.js'),
+        contextIsolation: true,
+      }
+    })
+    diningwin.loadURL(path.join('file:',__dirname,'dining-add.html'));
+  })
   
   ipcMain.on('window-index', function(){
     const indexwin = new BrowserWindow({

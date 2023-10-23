@@ -7,5 +7,7 @@ contextBridge.exposeInMainWorld('REDAPI', {
     login: () => ipcRenderer.send('user-login'),
     signup_reload_phone: () => ipcRenderer.send('signup_reload_phone'),
     signup_reload_id: () => ipcRenderer.send('signup_reload_id'),
-    signup_reload_email: () => ipcRenderer.send('signup_reload_email')
+    signup_reload_email: () => ipcRenderer.send('signup_reload_email'),
+    debug_reload_merchant : () => ipcRenderer.send('debug_reload_merchant'),
+    debug_reload_merchant_add : () => ipcRenderer.send('debug_reload_merchant_add'),
 })
