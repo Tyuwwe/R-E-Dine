@@ -17,6 +17,15 @@ body {
     margin: 0;
 }
 
+div, img {
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    -khtml-user-select: none; 
+    user-select:none;
+    -webkit-user-drag: none;
+}
+
 .dining-body {
     background-color: var(--main-bkg);
     transition-duration: 0.4s;
@@ -74,7 +83,7 @@ body {
     padding-bottom: 20px;
 }
 
-.food {
+.food, .food-del {
     width: 100%;
     height: 80px;
     background-color: var(--lighter-gray);
@@ -213,7 +222,7 @@ input {
     margin-top: 5px;
     border-radius: 50px;
     border-width: 2px;
-    border-color: var(--deep-gray);
+    border-color: var(--lighter-gray);
     border-style: solid;
     background-color: var(--pure-white);
     transition-duration: 0.4s;
@@ -271,6 +280,10 @@ input {
     box-shadow: 0 0px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
+.addpic-img:hover {
+    transform: scale(1.1);
+}
+
 .addBTN {
     font-size: 1.5rem;
     font-weight: bold;
@@ -294,4 +307,93 @@ input {
 
 .addBTN:active {
     background-color: var(--lighter-gray);
+}
+
+/*dining-del.html*/
+.food-del {
+    position: relative;
+}
+
+.food-del-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    font-size: 25px;
+    font-weight: lighter;
+    z-index: 999;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.4s;
+}
+
+.food-del:hover {
+    transform: scale(1.1);
+}
+
+.food-del-info:hover {
+    background-color: #b74341;
+    color: var(--bright-gray);
+}
+
+.food-del-pic {
+    z-index: 800;
+    width: 100px;
+    height: 80%;
+    object-fit: cover;
+    flex-basis: 20%;
+    border-radius: 10px;
+}
+
+.food-del-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.food-name {
+    font-size: 40px;
+    font-weight: bold;
+    flex-basis: 40%;
+    text-align: center;
+    color: var(--pure-black);
+}
+
+.food-price-storage {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.food-price {
+    font-size: 25px;
+    font-weight: lighter;
+    color: var(--pure-black);
+}
+
+.food-storage {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--pure-black);
+}
+
+.food-warn {
+    pointer-events: none;
+}
+
+.float-box-del {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    min-width: 550px;
 }

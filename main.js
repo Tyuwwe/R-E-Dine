@@ -60,6 +60,19 @@ const createWindow = () => {
     })
     diningwin.loadURL(path.join('file:',__dirname,'dining-add.html'));
   })
+
+  ipcMain.on('debug_reload_merchant_del', function(){
+    const diningwin = new BrowserWindow({
+      width: 700,
+      height: 800,
+      frame: false,
+      webPreferences: {
+        preload: path.join(__dirname, 'preload.js'),
+        contextIsolation: true,
+      }
+    })
+    diningwin.loadURL(path.join('file:',__dirname,'dining-del.html'));
+  })
   
   ipcMain.on('window-index', function(){
     const indexwin = new BrowserWindow({
