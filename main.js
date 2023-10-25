@@ -61,6 +61,32 @@ const createWindow = () => {
     diningwin.loadURL(path.join('file:',__dirname,'dining-add.html'));
   })
 
+  ipcMain.on('debug_reload_merchant_edit', function(){
+    const diningwin = new BrowserWindow({
+      width: 800,
+      height: 800,
+      frame: false,
+      webPreferences: {
+        preload: path.join(__dirname, 'preload.js'),
+        contextIsolation: true,
+      }
+    })
+    diningwin.loadURL(path.join('file:',__dirname,'dining-edit.html'));
+  })
+
+  ipcMain.on('debug_reload_merchant_edit_attr', function(){
+    const diningwin = new BrowserWindow({
+      width: 400,
+      height: 800,
+      frame: false,
+      webPreferences: {
+        preload: path.join(__dirname, 'preload.js'),
+        contextIsolation: true,
+      }
+    })
+    diningwin.loadURL(path.join('file:',__dirname,'dining-edit-attr.html'));
+  })
+
   ipcMain.on('debug_reload_merchant_del', function(){
     const diningwin = new BrowserWindow({
       width: 700,

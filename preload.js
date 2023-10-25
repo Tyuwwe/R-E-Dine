@@ -10,5 +10,7 @@ contextBridge.exposeInMainWorld('REDAPI', {
     signup_reload_email: () => ipcRenderer.send('signup_reload_email'),
     debug_reload_merchant : () => ipcRenderer.send('debug_reload_merchant'),
     debug_reload_merchant_add : () => ipcRenderer.send('debug_reload_merchant_add'),
-    debug_reload_merchant_del : () => ipcRenderer.send('debug_reload_merchant_del')
+    debug_reload_merchant_del : () => ipcRenderer.send('debug_reload_merchant_del'),
+    debug_reload_merchant_edit : () => ipcRenderer.send('debug_reload_merchant_edit'),
+    debug_reload_merchant_edit_attr : () => ipcRenderer.send('debug_reload_merchant_edit_attr'),
 })
