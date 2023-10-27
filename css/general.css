@@ -1,0 +1,123 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-orange: #ff6200;
+        --deep-orange: #cc5206;
+        --dark-orange: #89512e;
+        --main-bkg: #fcf1eb;
+        --second-bkg: #ffefe5;
+        --light-gray: #8b8b8b;
+        --lighter-gray: #CCCCCC;
+        --bright-gray: #f0f0f0;
+        --deep-gray: #5b5b5b;
+        --pure-white: white;
+        --pure-black: black;
+    }
+
+    .settings-ico {
+        filter: invert(0);
+        filter: opacity(65%);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-orange: #ff6200;
+        --deep-orange: #ceb9ab;
+        --dark-orange: #f8eae1;
+        --main-bkg: #444444;
+        --second-bkg: #5f5f5f;
+        --light-gray: #858585;
+        --lighter-gray: #424242;
+        --bright-gray: #2b2b2b;
+        --deep-gray: #a8a8a8;
+        --pure-white: rgb(40, 40, 40);
+        --pure-black: white;
+    }
+
+    .settings-ico {
+        filter: invert(1);
+    }
+}
+
+div, img {
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    -khtml-user-select: none; 
+    user-select:none;
+    -webkit-user-drag: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 6px;
+    position: fixed;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.close-btn {
+    background: #FF5D5B;
+    border: 1px solid #CF544D;
+    top: 20px;
+    right: 20px;
+    transition-duration: 0.4s;
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+    background: #b74341;
+    box-shadow: 0 0px 16px 0 rgba(0, 0, 0, 0.24), 0 12px 24px 0 rgba(0, 0, 0, 0.19);
+}
+
+.settings-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid transparent;
+    top: 20px;
+    left: 20px;
+    transition-duration: 0.4s;
+}
+
+.settings-btn:hover {
+    transform: scale(1.1);
+    background: var(--light-gray);
+    border: 1px solid var(--pure-black);
+    box-shadow: 0 0px 16px 0 rgba(0, 0, 0, 0.24), 0 12px 24px 0 rgba(0, 0, 0, 0.19);
+}
+
+.merchant-btn {
+    background: #2ac798;
+    border: 1px solid #07d295;
+    top: 20px;
+    right: 50px;
+    transition-duration: 0.4s;
+}
+
+.merchant-btn:hover {
+    transform: scale(1.1);
+    background: #027653;
+    box-shadow: 0 0px 16px 0 rgba(0, 0, 0, 0.24), 0 12px 24px 0 rgba(0, 0, 0, 0.19);
+}
+
+.drag-part {
+    position: fixed;
+    z-index: 998;
+    top: 0px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    /* 高度自行调整 */
+    height: 30px;
+    /* 拖拽 */
+    -webkit-app-region: drag;
+}

@@ -1,3 +1,4 @@
+/*
 document.getElementById("modeswitch").addEventListener('click', () => {
     console.log(document.getElementById("modeswitch").className);
     if(document.getElementById("modeswitch").className == 'btn darkmode-btn') {
@@ -22,10 +23,20 @@ document.getElementById("modeswitch").addEventListener('click', () => {
         document.getElementById("modeswitch").className = 'btn darkmode-btn';
     }
 })
+*/
 
 document.getElementById('closeWindow').addEventListener('click', () => {
     window.close();
 })
+
+var settingsbtn = document.getElementById('modeswitch');
+//console.log(settingsbtn);
+if(settingsbtn) {
+    settingsbtn.addEventListener('click', () => {
+        console.log('1');
+        window.REDAPI.settings();
+    })
+}
 
 /*
 const isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)"); // 是深色

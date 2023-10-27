@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron')
+const { app, BrowserWindow, ipcMain, nativeTheme } = require('electron')
 const path = require('node:path')
 
 const createWindow = () => {
@@ -32,6 +32,19 @@ const createWindow = () => {
 
   ipcMain.on('signup_reload_id',function(){
     win.loadFile('signup-id.html');
+  })
+
+  ipcMain.on('window-settings', function(){
+    const settingswin = new BrowserWindow({
+      width: 400,
+      height: 640,
+      frame: false,
+      webPreferences: {
+        preload: path.join(__dirname, 'preload.js'),
+        contextIsolation: true,
+      }
+    })
+    settingswin.loadURL(path.join('file:',__dirname,'settings.html'));
   })
 
   ipcMain.on('debug_reload_merchant', function(){
@@ -127,6 +140,18 @@ const createWindow = () => {
     orderwin.loadURL(path.join('file:',__dirname,'order.html'));
   })
 
+  ipcMain.handle('dark-mode:toggle', () => {
+    if (nativeTheme.shouldUseDarkColors) {
+      nativeTheme.themeSource = 'light'
+    } else {
+      nativeTheme.themeSource = 'dark'
+    }
+    return nativeTheme.shouldUseDarkColors
+  })
+
+  ipcMain.handle('dark-mode:system', () => {
+    nativeTheme.themeSource = 'system'
+  })
 }
 
 app.whenReady().then(() => {

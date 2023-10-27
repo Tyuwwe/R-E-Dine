@@ -5,6 +5,7 @@ contextBridge.exposeInMainWorld('REDAPI', {
     openOrder: () => ipcRenderer.send('window-order'),
     signup: () => ipcRenderer.send('user-signup'),
     login: () => ipcRenderer.send('user-login'),
+    settings: () => ipcRenderer.send('window-settings'),
     signup_reload_phone: () => ipcRenderer.send('signup_reload_phone'),
     signup_reload_id: () => ipcRenderer.send('signup_reload_id'),
     signup_reload_email: () => ipcRenderer.send('signup_reload_email'),
@@ -13,4 +14,9 @@ contextBridge.exposeInMainWorld('REDAPI', {
     debug_reload_merchant_del : () => ipcRenderer.send('debug_reload_merchant_del'),
     debug_reload_merchant_edit : () => ipcRenderer.send('debug_reload_merchant_edit'),
     debug_reload_merchant_edit_attr : () => ipcRenderer.send('debug_reload_merchant_edit_attr'),
+})
+
+contextBridge.exposeInMainWorld('darkMode', {
+    toggle: () => ipcRenderer.invoke('dark-mode:toggle'),
+    system: () => ipcRenderer.invoke('dark-mode:system')
 })
