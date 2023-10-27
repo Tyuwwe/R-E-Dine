@@ -6,6 +6,7 @@ contextBridge.exposeInMainWorld('REDAPI', {
     signup: () => ipcRenderer.send('user-signup'),
     login: () => ipcRenderer.send('user-login'),
     settings: () => ipcRenderer.send('window-settings'),
+    open_github: () => ipcRenderer.send('open-github'),
     signup_reload_phone: () => ipcRenderer.send('signup_reload_phone'),
     signup_reload_id: () => ipcRenderer.send('signup_reload_id'),
     signup_reload_email: () => ipcRenderer.send('signup_reload_email'),

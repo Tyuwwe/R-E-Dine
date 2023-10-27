@@ -356,15 +356,18 @@ input {
     font-size: 20px;
     height: 40px;
     color: var(--pure-black);
+    font-weight: bold;
 }
 
 .current-mode {
     font-size: 15px;
-    height: 40px;
+    height: auto;
+    margin-bottom: 10px;
     color: var(--pure-black);
 }
 
 .settings-btn-container {
+    margin-bottom: 20px;
     width: 100%;
     height: auto;
     display: flex;
@@ -385,4 +388,16 @@ input {
 .settings-list-btn:hover {
     color: var(--pure-white);
     background-color: var(--deep-orange);
+}
+
+.githubBTN {
+    width: 100%;
+}
+
+.title-settings {
+    font-weight: bolder;
+}
+
+.float-box-settings {
+    padding-top: 20px;
 }

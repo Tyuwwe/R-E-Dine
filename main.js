@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, nativeTheme } = require('electron')
+const { app, BrowserWindow, ipcMain, nativeTheme, shell } = require('electron')
 const path = require('node:path')
 
 const createWindow = () => {
@@ -32,6 +32,10 @@ const createWindow = () => {
 
   ipcMain.on('signup_reload_id',function(){
     win.loadFile('signup-id.html');
+  })
+
+  ipcMain.on('open-github',function(){
+    shell.openExternal('https://www.baidu.com');
   })
 
   ipcMain.on('window-settings', function(){
