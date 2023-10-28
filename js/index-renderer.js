@@ -33,8 +33,8 @@ function showorder(rest) {
     var order = document.getElementsByName(rest);
     for(i = 0; i < order.length; i++) {
         if((order.className!="rest-list-btn")&&(order.className!="rest-list-btn-selected")) {
-            order[i].style.transform = "scale("+ 1 +")";
-            order[i].style.marginRight = "1%";
+            order[i].style.transform = "translate(0px, 0px)";
+            order[i].style.marginTop = "5px";
             //order[i].style.display = "flex";
         }
     }
@@ -44,8 +44,8 @@ function hideorder(rest) {
     var order = document.getElementsByName(rest);
     for(i = 0; i < order.length; i++) {
         if((order.className!="rest-list-btn")&&(order.className!="rest-list-btn-selected")) {
-            order[i].style.transform = "scale("+ 0 +")";
-            order[i].style.marginRight = "-100%";
+            order[i].style.transform = "translate(-110%, 0px)";
+            order[i].style.marginTop = "-100px";
             //order[i].style.display = "none";
         }
     }

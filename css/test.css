@@ -1,0 +1,66 @@
+.overhide {
+    height: 300px;
+    margin-left: 40px;
+    width: 430px;
+    overflow: hidden;
+
+}
+
+.list-container {
+    height: 260px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 450px;
+    overflow: auto;
+}
+
+.list-item {
+    width: 360px;
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 60px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    transition-duration: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-item:hover {
+    transform: scale(1.1);
+}
+
+.syncBTN {
+    float: left;
+    background-color: var(--main-orange);
+    color: var(--pure-white);
+    width: 80%;
+    height: 45px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-top: 40px;
+    transition-duration: 0.4s;
+}
+
+.syncBTN:hover {
+    background-color: var(--deep-orange);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login_R {
+    width: 500px;
+    height: auto;
+    padding-top: 0px;
+    padding-bottom: 40px;
+}
+
+.syncIMG {
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+}
