@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/general.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>RED 点餐配送系统</title>
+  </head>
+  <body class="index-body">
+    <div class="drag-part"></div>
+    <div class="wrapper">
+        <div id="closeWindow" class="btn close-btn"></div>
+        <div id="modeswitch" class="btn settings-btn"><img class="settings-ico" width="100%" height="100%" src="./assets/settings.png"></div>
+    </div>
+    <div class="block-center">
+      <h1>RED</h1>
+      <h2 class="center-subtitle">R-E-Dine</h2>
+      <div class="rest-list-outside">
+        <div class="rest-title">Restaurant List<br>选择一个餐厅</div>
+        <div class="rest-choose-list">
+          <div class="rest-container">
+            <img class="rest1-img" src="./assets/pic/rest01.jpg">
+            <div class="rest1-desc">
+              <div class="rest-choose-title">Chinese<br>Restaurant</div>
+              <div class="rest-choose-subtitle">A Chinese Restaurant</div>
+            </div>
+            <div class="rest-choose-tag">年度<br>高分<br>餐厅</div>
+          </div>
+          <div class="rest-container">
+            <img class="rest1-img" src="./assets/pic/rest02.jpg">
+            <div class="rest1-desc">
+              <div class="rest-choose-title">Western<br>Restaurant</div>
+              <div class="rest-choose-subtitle">A Western Restaurant</div>
+            </div>
+            <div class="rest-choose-tag">年度<br>热门<br>餐厅</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/choose-renderer.js"></script>
+  <script src="./js/general-functions.js"></script>
+</html>

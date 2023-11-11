@@ -127,7 +127,7 @@ const createWindow = () => {
         contextIsolation: true,
       }
     })
-    indexwin.loadURL(path.join('file:',__dirname,'index.html'));
+    indexwin.loadURL(path.join('file:',__dirname,'choose-rest.html'));
     win.close();
   })
 
