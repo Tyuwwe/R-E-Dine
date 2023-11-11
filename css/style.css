@@ -50,6 +50,7 @@ h1 {
     width: 80%;
     margin-left: 10%;
     margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .order-list-container {
@@ -738,6 +739,7 @@ h3 {
 .rest-list-outside {
     background-color: var(--pure-white);
     height: auto;
+    padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
     border-radius: 30px;
@@ -931,6 +933,7 @@ h3 {
     font-size: 16px;
     border-radius: 10px;
     margin-top: 20px;
+    margin-bottom: 20px;
     transition-duration: 0.4s;
 }
 

@@ -1,7 +1,7 @@
-var select = document.getElementsByClassName('rest-container');
+document.getElementById('chinese').addEventListener('click', ()=>{
+    window.REDAPI.choose_chinese();
+})
 
-for(i = 0; i < select.length; i++) {
-    select[i].addEventListener('click', () => {
-        console.log('hi');
-    })
-}
+document.getElementById('western').addEventListener('click', ()=>{
+    window.REDAPI.choose_western();
+})

@@ -129,6 +129,14 @@ const createWindow = () => {
     })
     indexwin.loadURL(path.join('file:',__dirname,'choose-rest.html'));
     win.close();
+
+    ipcMain.on('choose-chinese', function(){
+      indexwin.loadURL(path.join('file:',__dirname,'rest-list.html?chinese'));
+    })
+
+    ipcMain.on('choose-western', function(){
+      indexwin.loadURL(path.join('file:',__dirname,'rest-list.html?western'));
+    })
   })
 
   ipcMain.on('window-order' ,function(){

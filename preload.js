@@ -15,6 +15,8 @@ contextBridge.exposeInMainWorld('REDAPI', {
     debug_reload_merchant_del : () => ipcRenderer.send('debug_reload_merchant_del'),
     debug_reload_merchant_edit : () => ipcRenderer.send('debug_reload_merchant_edit'),
     debug_reload_merchant_edit_attr : () => ipcRenderer.send('debug_reload_merchant_edit_attr'),
+    choose_chinese : () => ipcRenderer.send('choose-chinese'),
+    choose_western : () => ipcRenderer.send('choose-western'),
 })
 
 contextBridge.exposeInMainWorld('darkMode', {
