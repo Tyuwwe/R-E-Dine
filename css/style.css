@@ -886,11 +886,35 @@ h3 {
     float: left;
 }
 
+.num-container {
+    width: 50px;
+    height: 100px;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.num-number {
+    width: 50px;
+    height: 100px;
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-align: center;
+    outline: none;
+    background-color: transparent;
+    transition-duration: 0.4s;
+}
+
 .foodlist-right-container {
-    width: 200px;
+    width: 150px;
     float: right;
     height: 100px;
     margin-left: -100%;
+    margin-right: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
