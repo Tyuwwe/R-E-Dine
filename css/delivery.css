@@ -1,0 +1,119 @@
+body {
+    background-color: var(--main-bkg);
+}
+
+.deli-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.upper-container {
+    width: 500px;
+    height: 60px;
+    margin-bottom: 20px;
+    background-color: var(--light-gray);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deli-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--pure-black);
+}
+
+.bottom-container {
+    width: 500px;
+    height: 500px;
+    background-color: var(--light-gray);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deli-order-list {
+    width: 480px;
+    height: 450px;
+    margin-left: 0px;
+    border-radius: 30px;
+    background-color: var(--deep-gray);
+    overflow: auto;
+}
+
+.deli-order-list-outside {
+    width: 450px;
+    height: 450px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.deli-order {
+    width: 450px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    background-color: var(--bright-gray);
+    transition-duration: 0.4s;
+}
+
+.deli-order:hover {
+    background-color: var(--lighter-gray);
+    transform: scale(0.95);
+}
+
+.deli-order-left {
+    margin-left: 10%;
+    width: 35%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.deli-order-title {
+    color: var(--pure-black);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.deli-order-dest {
+    color: var(--pure-black);
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.deli-order-len {
+    color: var(--main-orange);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.deli-order-right {
+    margin-right: 10%;
+    float: right;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.deli-order-user {
+    color: var(--pure-black);
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.deli-order-price {
+    color: var(--main-orange);
+    font-size: 35px;
+    font-weight: bold;
+}
