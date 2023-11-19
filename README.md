@@ -1,7 +1,7 @@
 # R-E-Dine
  Example Restaurant Preorder & Takeaway System
 
-Built with Node.js v20.8.1 & Electron 26.4.0
+Built with Node.js v20.9.0 & Electron 27.1.0
 
 Usage:
 
