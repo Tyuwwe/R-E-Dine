@@ -7,8 +7,10 @@
         --second-bkg: #ffefe5;
         --light-gray: #8b8b8b;
         --lighter-gray: #CCCCCC;
+        --lighter-gray-alpha: #cccccc80;
         --bright-gray: #f0f0f0;
         --deep-gray: #5b5b5b;
+        --dark-gray: #2e2e2e;
         --pure-white: white;
         --pure-black: black;
     }
@@ -28,8 +30,10 @@
         --second-bkg: #5f5f5f;
         --light-gray: #858585;
         --lighter-gray: #424242;
+        --lighter-gray-alpha: #42424280;
         --bright-gray: #2b2b2b;
         --deep-gray: #a8a8a8;
+        --dark-gray: #e1e1e1;
         --pure-white: rgb(40, 40, 40);
         --pure-black: white;
     }

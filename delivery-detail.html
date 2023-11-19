@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="./css/general.css">
+    <link rel="stylesheet" type="text/css" href="./css/delivery.css">
+    <title>RED 点餐配送系统 | 外卖员主页</title>
+  </head>
+  <body class="deli-detail-body">
+    <div class="drag-part"></div>
+    <div class="wrapper">
+        <div id="closeWindow" class="btn close-btn"></div>
+    </div>
+    <div class="deli-box-3d">
+        <div id="orderbox" class="deli-detail-upper">
+          <div class="deli-detail-upper-container">
+            <div class="deli-detail-title">配送订单详情 | 西安市</div>
+            <div class="deli-detail-subtitle">配送距离：1.35km</div>
+            <div class="deli-detail-dest">配送路线：雁塔区 至 长安区</div>
+            <div class="deli-detail-time">订单时间：12分钟前</div>
+          </div>
+        </div>
+        <div class="deli-detail-bottom">
+            <div class="deli-detail-orderlist">
+                <div class="deli-detail-order">
+                    <div class="deli-detail-order-name">糖醋里脊</div>
+                    <div class="deli-detail-order-price">12.99</div>
+                </div>
+            </div>
+            <button class="deli-detail-summit">确认接单</button>
+        </div>
+    </div>
+  </body>
+  <script src="./js/delivery-detail-renderer.js"></script>
+  <script src="./js/general-functions.js"></script>
+</html>
