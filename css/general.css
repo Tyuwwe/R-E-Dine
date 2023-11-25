@@ -13,6 +13,8 @@
         --dark-gray: #2e2e2e;
         --pure-white: white;
         --pure-black: black;
+        --warn-red: #740e0e;
+        --warn-red-lite: #942020;
     }
 
     .settings-ico {
@@ -36,6 +38,8 @@
         --dark-gray: #e1e1e1;
         --pure-white: rgb(40, 40, 40);
         --pure-black: white;
+        --warn-red: #740e0e;
+        --warn-red-lite: #942020;
     }
 
     .settings-ico {

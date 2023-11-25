@@ -2,14 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
     <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="./css/general.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
@@ -27,48 +19,10 @@
         <div class="rest-name">Chinese Restaurant</div>
         <div class="rest-subtitle">A Chinese Restaurant</div>
       </div>
-      <div class="rest-foodlist">
-        <div class="foodlist-item">
-          <img class="foodlist-item-img" src="./assets/pic/food-tangcu.jpg">
-          <div class="foodlist-right-container">
-            <div class="foodlist-foodname">糖醋里脊</div>
-            <div class="foodlist-price">
-              <div class="foodlist-pricetext">19.99</div>
-              <div class="foodlist-yuan">元</div>
-            </div>
-          </div>
-          <div class="num-container">
-            <input class="num-number" type="number" min="0" max="9" step="1" value="0">
-          </div>
+      <div id="foodlist-box" class="rest-foodlist">
         </div>
-        <div class="foodlist-item">
-          <img class="foodlist-item-img" src="./assets/pic/food-tangcu.jpg">
-          <div class="foodlist-right-container">
-            <div class="foodlist-foodname">糖醋里脊</div>
-            <div class="foodlist-price">
-              <div class="foodlist-pricetext">19.99</div>
-              <div class="foodlist-yuan">元</div>
-            </div>
-          </div>
-          <div class="num-container">
-            <input class="num-number" type="number" min="0" max="9" step="1" value="0">
-          </div>
-        </div>
-        <div class="foodlist-item">
-          <img class="foodlist-item-img" src="./assets/pic/food-tangcu.jpg">
-          <div class="foodlist-right-container">
-            <div class="foodlist-foodname">糖醋里脊</div>
-            <div class="foodlist-price">
-              <div class="foodlist-pricetext">19.99</div>
-              <div class="foodlist-yuan">元</div>
-            </div>
-          </div>
-          <div class="num-container">
-            <input class="num-number" type="number" min="0" max="9" step="1" value="0">
-          </div>
-        </div>
-        <button id="submit" class="foodlist-submit">提交</button>
       </div>
+      <button id="submit" class="foodlist-submit">提交</button>
     </div>
   </body>
   <script src="./js/restlist-renderer.js"></script>

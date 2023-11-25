@@ -48,11 +48,11 @@ document.getElementById('dropdown-content').addEventListener('mouseover', () => 
         document.getElementById('dropSVG').style.filter = "invert(1)";
     }
 })
-
+/*
 document.getElementById('signupBTN').addEventListener('click', () => {
     window.REDAPI.login();
 })
-
+*/
 var swithcBTNs = document.getElementsByClassName('drop-list-button');
 for(i = 0; i < swithcBTNs.length; i++) {
     if(swithcBTNs[i].id == 'use_phoneBTN') {

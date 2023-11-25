@@ -1,5 +1,6 @@
 const { app, BrowserWindow, ipcMain, nativeTheme, shell } = require('electron')
 const path = require('node:path')
+var user_id = 0;
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -18,24 +19,44 @@ const createWindow = () => {
     win.loadFile('signup.html');
   })
 
-  ipcMain.on('user-login',function(){
+  ipcMain.on('window-login',function(){
     win.loadFile('login.html');
   })
 
-  ipcMain.on('signup_reload_phone',function(){
-    win.loadFile('signup-phone.html');
-  })
+  ipcMain.on('user-login',function(event, userId, userRole){
+    console.log('Login Successful. Received User ID:', userId, 'User Role:', userRole);
+    user_id = userId;
+    if(userRole == "customer") {
+      const indexwin = new BrowserWindow({
+        width: 960,
+        height: 540,
+        frame: false,
+        webPreferences: {
+          preload: path.join(__dirname, 'preload.js'),
+          contextIsolation: true,
+        }
+      })
+      indexwin.loadURL(path.join('file:',__dirname,'choose-rest.html'));
+      win.close();
 
-  ipcMain.on('signup_reload_email',function(){
-    win.loadFile('signup.html');
-  })
-
-  ipcMain.on('signup_reload_id',function(){
-    win.loadFile('signup-id.html');
-  })
+      ipcMain.on('choose-chinese', function(){
+        indexwin.loadURL(path.join('file:',__dirname,'rest-list.html?chinese'));
+      })
+  
+      ipcMain.on('choose-western', function(){
+        indexwin.loadURL(path.join('file:',__dirname,'rest-list.html?western'));
+      })
+    }
+    else if(userRole == "delivery") {
+      win.loadFile("delivery-index.html");
+    }
+    else {
+      win.loadFile("dining-index.html");
+    }
+  });
 
   ipcMain.on('open-github',function(){
-    shell.openExternal('https://www.baidu.com');
+    shell.openExternal('https://github.com/1324151534/R-E-Dine');
   })
 
   ipcMain.on('window-settings', function(){
@@ -115,28 +136,6 @@ const createWindow = () => {
       }
     })
     diningwin.loadURL(path.join('file:',__dirname,'dining-del.html'));
-  })
-  
-  ipcMain.on('window-index', function(){
-    const indexwin = new BrowserWindow({
-      width: 960,
-      height: 540,
-      frame: false,
-      webPreferences: {
-        preload: path.join(__dirname, 'preload.js'),
-        contextIsolation: true,
-      }
-    })
-    indexwin.loadURL(path.join('file:',__dirname,'choose-rest.html'));
-    win.close();
-
-    ipcMain.on('choose-chinese', function(){
-      indexwin.loadURL(path.join('file:',__dirname,'rest-list.html?chinese'));
-    })
-
-    ipcMain.on('choose-western', function(){
-      indexwin.loadURL(path.join('file:',__dirname,'rest-list.html?western'));
-    })
   })
 
   ipcMain.on('window-order' ,function(){

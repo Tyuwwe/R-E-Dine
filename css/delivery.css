@@ -1,5 +1,6 @@
 body {
     background-color: var(--main-bkg);
+    transition-duration: 0.4s;
 }
 
 .deli-box {
@@ -135,6 +136,14 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.outside-box {
+    transform-style: preserve-3d;
+    position: relative;
+    transition: all .1s;
+    perspective: 1000px;
+
+}
+
 .deli-detail-upper {
     transform-style: preserve-3d;
     position: relative;
@@ -149,7 +158,10 @@ body {
 .deli-detail-upper-container {
     position: relative;
     width: 450px;
-    padding: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -188,4 +200,127 @@ body {
     font-size: 15px;
     font-weight: bold;
     color: var(--main-orange);
+}
+
+.deli-detail-bottom {
+    width: 450px;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: var(--bright-gray);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.deli-detail-order {
+    background-color: var(--lighter-gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 100px;
+    transition-duration: 0.4s;
+}
+
+.deli-detail-order:hover {
+    background-color: var(--light-gray);
+}
+
+.deli-detail-order-name {
+    color: var(--dark-gray);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.deli-detail-order-price {
+    color: var(--deep-gray);
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.deli-detail-maintitle {
+    width: 450px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--pure-black);
+    margin-bottom: 10px;
+}
+
+.deli-detail-submaintitle {
+    width: 450px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--deep-gray);
+    margin-bottom: 25px;
+}
+
+.deli-detail-order-count {
+    font-size: 20px;
+    font-weight: lighter;
+    color: var(--deep-gray);
+}
+
+.deli-detail-summit {
+    background-color: var(--main-orange);
+    color: var(--pure-white);
+    width: 450px;
+    height: 65px;
+    border: 0;
+    font-size: 25px;
+    border-radius: 100px;
+    transition-duration: 0.4s;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.deli-detail-summit:hover {
+    background-color: var(--deep-orange);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*delivery-time.html*/
+.deli-time-remain {
+    display: flex;
+    flex-direction: row;
+    color: var(--main-orange);
+    font-size: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.colon {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.deli-time-cancel {
+    background-color: var(--warn-red);
+    color: white;
+    width: 450px;
+    height: 65px;
+    border: 0;
+    font-size: 25px;
+    border-radius: 100px;
+    transition-duration: 0.4s;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.deli-time-cancel:hover {
+    background-color: var(--warn-red-lite);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.deli-detail-info {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 450px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: lighter;
+    color: var(--deep-gray);
 }

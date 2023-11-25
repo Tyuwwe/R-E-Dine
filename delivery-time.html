@@ -2,14 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
     <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="./css/general.css">
     <link rel="stylesheet" type="text/css" href="./css/delivery.css">
@@ -20,28 +12,34 @@
     <div class="wrapper">
         <div id="closeWindow" class="btn close-btn"></div>
     </div>
-    <div class="deli-box">
-        <div class="deli-detail-upper">
+    <div class="deli-box-3d">
+      <div class="outside-box">
+        <div id="orderbox" class="deli-detail-upper">
+          <div class="deli-detail-upper-container">
             <div class="deli-detail-title">配送订单详情 | 西安市</div>
             <div class="deli-detail-subtitle">配送距离：1.35km</div>
             <div class="deli-detail-dest">配送路线：雁塔区 至 长安区</div>
             <div class="deli-detail-time">订单时间：12分钟前</div>
+          </div>
         </div>
+      </div>
         <div class="deli-detail-bottom">
             <div class="deli-detail-map"></div>
             <div class="deli-time">
-              <div class="deli-time-title">剩余配送时间</div>
-              <div class="deli-time-remain">00:20:00</div>
+              <div class="deli-detail-submaintitle">剩余配送时间</div>
+              <div class="deli-time-remain">
+                <div class="deli-hour">00</div>
+                <div class="colon">:</div>
+                <div class="deli-min">30</div>
+                <div class="colon">:</div>
+                <div class="deli-sec">00</div>
+              </div>
             </div>
-            <div class="deli-detail-orderlist">
-                <div class="deli-detail-order-mini">
-                  <div class="deli-time-order">糖醋里脊</div>
-                </div>
-            </div>
-            <button class="deli-time-cancel">取消接单</button>
+            <div class="deli-detail-info">请在剩余时间内送达</div>
+            <button class="deli-time-cancel"><i class="fa fa-warning"></i> 反馈问题</button>
         </div>
     </div>
   </body>
-  <script src="./js/delivery-index-renderer.js"></script>
+  <script src="./js/delivery-time-renderer.js"></script>
   <script src="./js/general-functions.js"></script>
 </html>

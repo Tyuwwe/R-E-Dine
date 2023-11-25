@@ -2,14 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
     <link rel="stylesheet" type="text/css" href="./css/general.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <title>RED 点餐配送系统</title>
@@ -20,25 +12,24 @@
         <div id="closeWindow" class="btn close-btn"></div>
         <div id="modeswitch" class="btn settings-btn"><img class="settings-ico" width="100%" height="100%" src="./assets/settings.png"></div>
     </div>
-    <div class="login_R" id="Right">
+    <div class="login_R signup" id="Right">
       <h3>RED 点餐配送系统</h3>
       <p class="font_s">注册页面</p>
-      <p class="signup_drop">
-        <button id="dropBTN" class="dropbtn"><img id="dropSVG" class="dropSVG" src="./assets/dropbtn.svg"/>邮箱：</button>
-        <div id="dropdown-content" class ="dropdown-content">
-          <div class="empty10px"></div>
-          <button id="use_phoneBTN" class="drop-list-button">使用手机号注册</button>
-          <button id="use_IDBTN" class="drop-list-button">使用用户ID注册</button>
-        </div>
-      </p>
-      <input class="signup_id" type="text" size="20" maxlength="30" placeholder="请输入注册使用的电子邮箱">
+      <div class="pass-box">
+        <p class="font_username"><img class="passSVG" src="./assets/username.svg"/>用户名：</p>
+      </div>
+      <input class="signup_username" type="text" size="20" maxlength="30" placeholder="输入你的用户名">
+      <div class="pass-box">
+        <p class="font_email"><img class="passSVG" src="./assets/email.svg"/>邮箱：</p>
+      </div>
+      <input class="signup_email" type="email" size="20" maxlength="30" placeholder="输入你的邮箱">
       <div class="pass-box">
         <p class="font_password"><img class="passSVG" src="./assets/password.svg"/>密码：</p>
       </div>
       <input class="signup_password" type="password" size="20" maxlength="30" placeholder="输入你的密码">
       <button id="signupBTN" class="Signup_PageBTN">注册</button>
     </div>
-    <script src="./js/signup-renderer.js"></script>
+    <script src="./js/signup.js"></script>
     <script src="./js/general-functions.js"></script>
   </body>
 </html>
