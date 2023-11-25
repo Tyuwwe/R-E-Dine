@@ -1,5 +1,5 @@
 # R-E-Dine
- Example Restaurant Preorder & Takeaway System
+## Example Restaurant Preorder & Takeaway System
 
 Built with Node.js v20.9.0 & Electron 27.1.0
 
@@ -17,3 +17,8 @@ npm install --save-dev electron
 ```bash
 npm start
 ```
+
+## [R-E-Dine Server (GPLv3)](https://github.com/1324151534/R-E-Dine-Server)
+
+License: GPLv3 | Author: [Zeki T. Luan](https://github.com/1324151534)
+
