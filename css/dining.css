@@ -6,6 +6,9 @@ body {
 .dining-body {
     background-color: var(--main-bkg);
     transition-duration: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .dining-index-body {
@@ -83,10 +86,10 @@ button {
 }
 
 .listbtn {
-    font-size: 1rem;
+    font-size: 35px;
     font-weight: lighter;
     width: 100%;
-    height: 50px;
+    height: 160px;
     background-color: var(--bright-gray);
     color: var(--pure-black);
     margin-top: 5px;
@@ -403,25 +406,106 @@ input {
 }
 
 /*dining-index*/
-.food {
+.dining-food {
     display: flex;
     align-self: center;
-    justify-content: center;
+    justify-content: space-around;
+    height: 120px;
+    background-color: var(--lighter-gray);
+    margin-top: 5px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    width: 350px;
+    margin-left: 25px;
 }
 
-.food-info {
+.dining-food:hover {
+    transform: scale(1.1);
+    background-color: var(--light-gray);
+}
+
+.dining-food-info {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.food-title {
-    font-size: 25px;
+.dining-food-title {
+    font-size: 35px;
     font-weight: bold;
+    color: var(--pure-black);
 }
 
-.food-cost {
-    font-size: 15px;
+.dining-food-cost {
+    font-size: 25px;
     font-weight: normal;
+    color: var(--main-orange);
+}
+
+.dining-food-img {
+    width: 30%;
+    height: 80%;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.food-list {
+    width: 400px;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.dining-foodlist-outside {
+    width: 450px;
+    height: 500px;
+    overflow: auto;
+}
+
+.float-box-left,
+.float-box-right {
+    margin-top: 20px;
+    width: 400px;
+    height: 610px;
+    background-color: var(--bright-gray);
+    border-radius: 20px;
+    transition-duration: 0.4s;
+}
+
+.float-box-left:hover
+.float-box-right:hover {
+    box-shadow: 0 0px 16px 0 rgba(0, 0, 0, 0.24), 0 12px 24px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dining-box-left {
+    width: 50%;
+    min-width: 300px;
+    padding-top: 20px;
+    margin-right: 5px;
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+}
+
+.dining-box-right {
+    width: 50%;
+    min-width: 300px;
+    padding-top: 20px;
+    margin-left: 5px;
+    display: flex;
+    align-self: center;
+    justify-content: flex-start;
+}
+
+.btn-list {
+    width: 90%;
+    height: 500px;
+    margin-left: 5%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

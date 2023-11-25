@@ -2,15 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="./css/general.css">
     <link rel="stylesheet" type="text/css" href="./css/dining.css">
     <title>RED 点餐配送系统 | 商家服务</title>
@@ -21,31 +14,59 @@
         <div id="closeWindow" class="btn close-btn"></div>
         <div id="modeswitch" class="btn settings-btn"><img class="settings-ico" width="100%" height="100%" src="./assets/settings.png"></div>
     </div>
-    <div class="box-left">
-        <div class="float float-box-left">
+    <div class="dining-box-left">
+        <div class="float-box-left">
             <div class="title title-left">餐品列表</div>
             <div class="subtitle subtitle-left">R-E-Dine 后台管理系统</R-E-Dine></div>
-            <div class="list food-list">
-                <div class="food">
-                  <img class="food-img" src="./assets/pic/food-tangcu.jpg">
-                  <div class="food-info">
-                    <div class="food-title">糖醋里脊</div>
-                    <div class="food-cost">19.99元</div>
+            <div class="food-list">
+              <div class="dining-foodlist-outside">
+                <div class="dining-food">
+                  <img class="dining-food-img" src="./assets/pic/food-tangcu.jpg">
+                  <div class="dining-food-info">
+                    <div class="dining-food-title">糖醋里脊</div>
+                    <div class="dining-food-cost">19.99元</div>
                   </div>
                 </div>
-                <div class="food"></div>
-                <div class="food"></div>
+                <div class="dining-food">
+                  <img class="dining-food-img" src="./assets/pic/food-tangcu.jpg">
+                  <div class="dining-food-info">
+                    <div class="dining-food-title">糖醋里脊</div>
+                    <div class="dining-food-cost">19.99元</div>
+                  </div>
+                </div>
+                <div class="dining-food">
+                  <img class="dining-food-img" src="./assets/pic/food-tangcu.jpg">
+                  <div class="dining-food-info">
+                    <div class="dining-food-title">糖醋里脊</div>
+                    <div class="dining-food-cost">19.99元</div>
+                  </div>
+                </div>
+                <div class="dining-food">
+                  <img class="dining-food-img" src="./assets/pic/food-tangcu.jpg">
+                  <div class="dining-food-info">
+                    <div class="dining-food-title">糖醋里脊</div>
+                    <div class="dining-food-cost">19.99元</div>
+                  </div>
+                </div>
+                <div class="dining-food">
+                  <img class="dining-food-img" src="./assets/pic/food-tangcu.jpg">
+                  <div class="dining-food-info">
+                    <div class="dining-food-title">糖醋里脊</div>
+                    <div class="dining-food-cost">19.99元</div>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
     </div>
-    <div class="box-right">
-        <div class="float float-box-right">
+    <div class="dining-box-right">
+        <div class="float-box-right">
             <div class="title title-right">控制台</div>
             <div class="subtitle subtitle-right">调整你的上架菜品</div>
-            <div class="list btn-list">
-                <button id="addBTN" class="listbtn btn-add">添加新的菜品</button>
-                <button id="delBTN" class="listbtn btn-del">删除已有菜品</button>
-                <button id="editBTN" class="listbtn tag-edit">编辑已有菜品</button>
+            <div class="btn-list">
+                <button id="addBTN" class="listbtn btn-add"><i class="fa fa-plus"></i> 添加新的菜品</button>
+                <button id="delBTN" class="listbtn btn-del"><i class="fa fa-ban"></i> 删除已有菜品</button>
+                <button id="editBTN" class="listbtn tag-edit"><i class="fa fa-edit"></i> 编辑已有菜品</button>
             </div>
         </div>
     </div>

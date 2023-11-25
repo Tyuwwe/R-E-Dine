@@ -957,10 +957,10 @@ h3 {
 }
 
 .foodlist-submit {
-    float: left;
     background-color: var(--main-orange);
     color: var(--pure-white);
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
     height: 45px;
     border: 0;
     font-size: 16px;

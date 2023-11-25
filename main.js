@@ -113,7 +113,7 @@ const createWindow = () => {
   ipcMain.on('debug_reload_merchant', function(){
     const diningwin = new BrowserWindow({
       width: 960,
-      height: 540,
+      height: 740,
       frame: false,
       webPreferences: {
         preload: path.join(__dirname, 'preload.js'),
