@@ -401,3 +401,27 @@ input {
 .float-box-settings {
     padding-top: 20px;
 }
+
+/*dining-index*/
+.food {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.food-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.food-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.food-cost {
+    font-size: 15px;
+    font-weight: normal;
+}

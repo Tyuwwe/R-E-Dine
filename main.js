@@ -84,7 +84,12 @@ const createWindow = () => {
       })
     }
     else {
-      win.loadFile("dining-index.html");
+      if(userId == 105) {
+        win.loadURL(path.join('file:',__dirname,'dining-index.html?chinese'));
+      }
+      else if(userId == 106) {
+        win.loadURL(path.join('file:',__dirname,'dining-index.html?western'));
+      }
     }
   });
 
