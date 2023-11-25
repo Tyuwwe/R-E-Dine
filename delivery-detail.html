@@ -2,14 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
     <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="./css/general.css">
     <link rel="stylesheet" type="text/css" href="./css/delivery.css">
@@ -32,26 +24,12 @@
         </div>
       </div>
         <div class="deli-detail-bottom">
-            <div class="deli-detail-orderlist">
+            <div id="orderbox2" class="deli-detail-orderlist">
                 <div class="deli-detail-maintitle">订单内容</div>
                 <div class="deli-detail-submaintitle">Chinese Restaurant</div>
-                <div class="deli-detail-order">
-                    <div class="deli-detail-order-name">糖醋里脊</div>
-                    <div class="deli-detail-order-count">×1</div>
-                    <div class="deli-detail-order-price">12.99元</div>
-                </div>
-                <div class="deli-detail-order">
-                    <div class="deli-detail-order-name">糖醋里脊</div>
-                    <div class="deli-detail-order-count">×1</div>
-                    <div class="deli-detail-order-price">12.99元</div>
-                </div>
-                <div class="deli-detail-order">
-                    <div class="deli-detail-order-name">糖醋里脊</div>
-                    <div class="deli-detail-order-count">×1</div>
-                    <div class="deli-detail-order-price">12.99元</div>
-                </div>
             </div>
-            <button class="deli-detail-summit">确认接单</button>
+            <div id="cash" class="deli-detail-submaintitle">接单利润：10.00元</div>
+            <button id="detail-summit" class="deli-detail-summit">确认接单</button>
         </div>
     </div>
   </body>

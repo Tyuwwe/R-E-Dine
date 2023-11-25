@@ -15,6 +15,10 @@ contextBridge.exposeInMainWorld('REDAPI', {
     debug_reload_merchant_edit_attr : () => ipcRenderer.send('debug_reload_merchant_edit_attr'),
     choose_chinese : () => ipcRenderer.send('choose-chinese'),
     choose_western : () => ipcRenderer.send('choose-western'),
+    requestID : () => ipcRenderer.send('requestID'),
+    returnID : (user_id) => ipcRenderer.on('returnID', user_id),
+    openOrderDetail : (order_id) => ipcRenderer.send('order-detail', order_id),
+    openTime : () => ipcRenderer.send('open-time')
 })
 
 contextBridge.exposeInMainWorld('darkMode', {

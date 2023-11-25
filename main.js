@@ -36,6 +36,7 @@ const createWindow = () => {
           contextIsolation: true,
         }
       })
+
       indexwin.loadURL(path.join('file:',__dirname,'choose-rest.html'));
       win.close();
 
@@ -46,9 +47,41 @@ const createWindow = () => {
       ipcMain.on('choose-western', function(){
         indexwin.loadURL(path.join('file:',__dirname,'rest-list.html?western'));
       })
+
+      ipcMain.on('requestID', function() {
+        indexwin.webContents.send('returnID', user_id);
+      })
     }
     else if(userRole == "delivery") {
       win.loadFile("delivery-index.html");
+
+      ipcMain.on('order-detail', function(event, orderID){
+        console.log('openDetailPage, ID=', orderID);
+        const orderdetailwin = new BrowserWindow({
+          width: 580,
+          height: 840,
+          frame: false,
+          webPreferences: {
+            preload: path.join(__dirname, 'preload.js'),
+            contextIsolation: true,
+          }
+        })
+        orderdetailwin.loadURL(path.join('file:',__dirname,'delivery-detail.html?' + orderID));
+      
+        ipcMain.on('open-time', function() {
+          const timewin = new BrowserWindow({
+            width: 600,
+            height: 800,
+            frame: false,
+            webPreferences: {
+              preload: path.join(__dirname, 'preload.js'),
+              contextIsolation: true,
+            }
+          })
+          timewin.loadURL(path.join('file:',__dirname,'delivery-time.html'));
+          orderdetailwin.close();
+        })
+      })
     }
     else {
       win.loadFile("dining-index.html");

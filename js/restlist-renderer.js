@@ -34,6 +34,13 @@ function getdish() {
 getdish();
 
 var orderlist = [];
+var user_id = 0;
+window.REDAPI.returnID((_value, userID) => {
+    user_id = userID;
+    console.log(user_id);
+});
+window.REDAPI.requestID();
+
 
 function order() {
     var num = document.getElementsByClassName('num-number');
@@ -48,7 +55,7 @@ function order() {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            user_id : 10,
+            user_id : user_id,
             order_details : orderlist
         })
         })
@@ -58,7 +65,6 @@ function order() {
                 console.error('提交失败');
             } else {
                 console.log('提交成功');
-                window.REDAPI.login();
             }
         })
         .catch((error) => {

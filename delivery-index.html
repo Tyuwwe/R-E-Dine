@@ -2,14 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
     <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="./css/general.css">
     <link rel="stylesheet" type="text/css" href="./css/delivery.css">
@@ -26,76 +18,11 @@
         </div>
         <div class="bottom-container">
             <div class="deli-order-list-outside">
-                <div class="deli-order-list">
-                    <div class="deli-order">
-                        <div class="deli-order-left">
-                            <div class="deli-order-title">西安市</div>
-                            <div class="deli-order-dest">长安区-雁塔区</div>
-                            <div class="deli-order-len">4.5km</div>
-                        </div>
-                        <div class="deli-order-right">
-                            <div class="deli-order-user">林先生</div>
-                            <div class="deli-order-price"><i class="fa fa-yen"></i> 9.52</div>
-                        </div>
-                    </div>
-                    <div class="deli-order">
-                        <div class="deli-order-left">
-                            <div class="deli-order-title">西安市</div>
-                            <div class="deli-order-dest">碑林区-雁塔区</div>
-                            <div class="deli-order-len">9.8km</div>
-                        </div>
-                        <div class="deli-order-right">
-                            <div class="deli-order-user">王先生</div>
-                            <div class="deli-order-price"><i class="fa fa-yen"></i> 12.24</div>
-                        </div>
-                    </div>
-                    <div class="deli-order">
-                        <div class="deli-order-left">
-                            <div class="deli-order-title">西安市</div>
-                            <div class="deli-order-dest">长安区-新城区</div>
-                            <div class="deli-order-len">14.5km</div>
-                        </div>
-                        <div class="deli-order-right">
-                            <div class="deli-order-user">张先生</div>
-                            <div class="deli-order-price"><i class="fa fa-yen"></i> 20.87</div>
-                        </div>
-                    </div>
-                    <div class="deli-order">
-                        <div class="deli-order-left">
-                            <div class="deli-order-title">西安市</div>
-                            <div class="deli-order-dest">新城区-曲江新区</div>
-                            <div class="deli-order-len">8.5km</div>
-                        </div>
-                        <div class="deli-order-right">
-                            <div class="deli-order-user">孙先生</div>
-                            <div class="deli-order-price"><i class="fa fa-yen"></i> 11.42</div>
-                        </div>
-                    </div>
-                    <div class="deli-order">
-                        <div class="deli-order-left">
-                            <div class="deli-order-title">西安市</div>
-                            <div class="deli-order-dest">长安区-碑林区</div>
-                            <div class="deli-order-len">11.4km</div>
-                        </div>
-                        <div class="deli-order-right">
-                            <div class="deli-order-user">林先生</div>
-                            <div class="deli-order-price"><i class="fa fa-yen"></i> 5.14</div>
-                        </div>
-                    </div>
-                    <div class="deli-order">
-                        <div class="deli-order-left">
-                            <div class="deli-order-title">西安市</div>
-                            <div class="deli-order-dest">雁塔区-雁塔区</div>
-                            <div class="deli-order-len">0.5km</div>
-                        </div>
-                        <div class="deli-order-right">
-                            <div class="deli-order-user">刘先生</div>
-                            <div class="deli-order-price"><i class="fa fa-yen"></i> 3.21</div>
-                        </div>
-                    </div>
+                <div id="orderbox" class="deli-order-list">
                 </div>
             </div>
         </div>
+        <button id="refresh" class="deli-index-refresh">刷新</button>
     </div>
   </body>
   <script src="./js/delivery-index-renderer.js"></script>
