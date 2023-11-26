@@ -28,9 +28,12 @@ mouseOverContainer.addEventListener('mouseleave', (e) => {
 var orders;
 var url = document.location.toString();
 var urlParmStr = url.slice(url.indexOf('?')+1);//获取问号后所有的字符串
+var default_url;
 
-function getorder() {
-    fetch('http://192.168.0.100:5000/orders/' + urlParmStr , {
+window.REDAPI.requestUrl().then(function (res) {default_url = res; getorder(res)});
+
+function getorder(url) {
+    fetch(url + '/orders/' + urlParmStr , {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',

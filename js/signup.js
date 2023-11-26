@@ -1,5 +1,8 @@
+var default_url;
+window.REDAPI.requestUrl().then(function (res) {default_url = res});
+
 function signup(signup_name, signup_email, signup_password) {
-    fetch('http://192.168.0.100:5000/users', {
+    fetch(default_url + '/users', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -25,5 +28,37 @@ function signup(signup_name, signup_email, signup_password) {
 }
 
 document.getElementById('signupBTN').addEventListener('click', () => {
-    signup(document.getElementsByClassName('signup_username')[0].value, document.getElementsByClassName('signup_email')[0].value, document.getElementsByClassName('signup_password')[0].value);
+    var warn_height = 0;
+    var warn_flag = 0;
+    document.getElementsByClassName('warn-area')[0].innerHTML = "";
+    document.getElementsByClassName('warn-area')[0].style.height = warn_height + "px";
+    //username is NULL
+    if(document.getElementsByClassName('signup_username')[0].value == "") {
+        warn_flag = 1;
+        document.getElementsByClassName('warn-area')[0].innerHTML += "<div class='warn-area-items'>注册失败：账号不能为空！</div>";
+        warn_height += 45;
+        document.getElementsByClassName('warn-area')[0].style.height = warn_height + "px";
+    }
+    //email is NULL
+    if(document.getElementsByClassName('signup_email')[0].value == "") {
+        warn_flag = 1;
+        document.getElementsByClassName('warn-area')[0].innerHTML += "<div class='warn-area-items'>注册失败：邮箱不能为空！</div>";
+        warn_height += 45;
+        document.getElementsByClassName('warn-area')[0].style.height = warn_height + "px";
+    }
+    //password is NULL
+    if(document.getElementsByClassName('signup_password')[0].value == "") {
+        warn_flag = 1;
+        document.getElementsByClassName('warn-area')[0].innerHTML += "<div class='warn-area-items'>注册失败：密码不能为空！</div>";
+        warn_height += 45;
+        document.getElementsByClassName('warn-area')[0].style.height = warn_height + "px";
+    }
+    if(!warn_flag) {
+        //console.log(md5(document.getElementsByClassName('signup_password')[0].value));
+        signup(document.getElementsByClassName('signup_username')[0].value, document.getElementsByClassName('signup_email')[0].value, md5(document.getElementsByClassName('signup_password')[0].value));
+    }
+})
+
+document.getElementById('returnBTN').addEventListener('click', () => {
+    window.REDAPI.login();
 })

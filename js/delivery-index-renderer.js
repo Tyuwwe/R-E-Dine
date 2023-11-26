@@ -1,7 +1,9 @@
 var orders;
+var default_url;
+window.REDAPI.requestUrl().then(function (res) {default_url = res; getorder(res)});
 
-function getorder() {
-    fetch('http://192.168.0.100:5000/orders' , {
+function getorder(url) {
+    fetch(url + '/orders' , {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',

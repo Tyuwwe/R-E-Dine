@@ -11,3 +11,7 @@ document.getElementById('reset-to-system').addEventListener('click', async () =>
 document.getElementById('open-github').addEventListener('click', () => {
   window.REDAPI.open_github();
 })
+
+document.getElementById('copy-link').addEventListener('click', () => {
+  document.execCommand('Copy');
+})

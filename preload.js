@@ -18,7 +18,8 @@ contextBridge.exposeInMainWorld('REDAPI', {
     requestID : () => ipcRenderer.send('requestID'),
     returnID : (user_id) => ipcRenderer.on('returnID', user_id),
     openOrderDetail : (order_id) => ipcRenderer.send('order-detail', order_id),
-    openTime : () => ipcRenderer.send('open-time')
+    openTime : () => ipcRenderer.send('open-time'),
+    requestUrl : () => ipcRenderer.invoke('requestURL'),
 })
 
 contextBridge.exposeInMainWorld('darkMode', {

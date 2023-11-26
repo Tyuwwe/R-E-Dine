@@ -1,14 +1,16 @@
 var url = document.location.toString();
 var urlParmStr = url.slice(url.indexOf('?')+1);//获取问号后所有的字符串
 //console.log(urlParmStr);
+var default_url;
+window.REDAPI.requestUrl().then(function (res) {default_url = res; getdish(res)});
 
 if (urlParmStr == "western") {
     document.getElementsByClassName('rest-name')[0].innerHTML = "Western Restaurant";
     document.getElementsByClassName('rest-subtitle')[0].innerHTML = "A Western Restaurant";
 }
 
-function getdish() {
-    fetch('http://192.168.0.100:5000/dishes?type=' + urlParmStr , {
+function getdish(url) {
+    fetch(url + '/dishes?type=' + urlParmStr , {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',
@@ -31,8 +33,6 @@ function getdish() {
     })
 }
 
-getdish();
-
 var orderlist = [];
 var user_id = 0;
 window.REDAPI.returnID((_value, userID) => {
@@ -49,7 +49,7 @@ function order() {
             orderlist.push({dish_id : num[i].id, quantity : num[i].value})
         }
     }
-    fetch('http://192.168.0.100:5000/orders', {
+    fetch(default_url + '/orders', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

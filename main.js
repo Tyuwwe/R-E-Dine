@@ -1,6 +1,7 @@
 const { app, BrowserWindow, ipcMain, nativeTheme, shell } = require('electron')
 const path = require('node:path')
 var user_id = 0;
+var default_url = "http://localhost:5000";
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -202,6 +203,10 @@ const createWindow = () => {
     nativeTheme.themeSource = 'system'
   })
 }
+
+ipcMain.handle('requestURL', () => {
+  return default_url;
+})
 
 app.whenReady().then(() => {
   createWindow()

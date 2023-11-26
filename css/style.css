@@ -110,7 +110,6 @@ h1 {
 .login_R {
     position: absolute;
     width: 500px;
-    height: 500px;
     background-color: var(--pure-white);
     border-radius: 20px;
     top: 50%;
@@ -118,10 +117,7 @@ h1 {
     transform: translate(-50%, -50%);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     transition-duration: 0.4s;
-}
-
-.signup {
-    height: 600px;
+    padding-bottom: 50px;
 }
 
 h3 {
@@ -678,13 +674,13 @@ h3 {
     float: left;
     background-color: var(--main-orange);
     color: var(--pure-white);
-    width: 400px;
+    width: 230px;
     height: 45px;
     border: 0;
     font-size: 16px;
     border-radius: 10px;
-    margin-left: 50px;
-    margin-top: 40px;
+    margin-left: 20px;
+    margin-top: 20px;
     transition-duration: 0.4s;
 }
 
@@ -971,6 +967,59 @@ h3 {
 }
 
 .foodlist-submit:hover {
+    background-color: var(--deep-orange);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*signup/login warnarea*/
+.warn-area {
+    width: 400px;
+    margin-top: 20px;
+    margin-left: 50px;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    background-color: var(--warn-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 0px;
+    overflow: hidden;
+}
+
+.warn-area:hover {
+    background-color: var(--warn-red-lite);
+}
+
+.warn-area-items {
+    color: white;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition-duration: 0.2s;
+}
+
+.warn-area-items:hover {
+    color: rgba(255, 255, 255, 0.768);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.returnBTN {
+    float: left;
+    background-color: var(--light-gray);
+    color: var(--pure-white);
+    width: 150px;
+    height: 45px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 20px;
+    transition-duration: 0.4s;
+}
+
+.returnBTN:hover {
     background-color: var(--deep-orange);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
