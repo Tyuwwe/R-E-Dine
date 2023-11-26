@@ -37,14 +37,14 @@ document.getElementById('loginBTN').addEventListener('click', () => {
     //username is NULL
     if(document.getElementsByClassName('text_id')[0].value == "") {
         warn_flag = 1;
-        document.getElementsByClassName('warn-area')[0].innerHTML += "<div class='warn-area-items'>登录失败：账号不能为空！</div>";
+        document.getElementsByClassName('warn-area')[0].innerHTML += "<div class='warn-area-items'>登录失败：账号不能为空</div>";
         warn_height += 45;
         document.getElementsByClassName('warn-area')[0].style.height = warn_height + "px";
     }
     //password is NULL
     if(document.getElementsByClassName('text_password')[0].value == "") {
         warn_flag = 1;
-        document.getElementsByClassName('warn-area')[0].innerHTML += "<div class='warn-area-items'>登录失败：密码不能为空！</div>";
+        document.getElementsByClassName('warn-area')[0].innerHTML += "<div class='warn-area-items'>登录失败：密码不能为空</div>";
         warn_height += 45;
         document.getElementsByClassName('warn-area')[0].style.height = warn_height + "px";
     }
