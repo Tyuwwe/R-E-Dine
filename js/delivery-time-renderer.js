@@ -64,3 +64,7 @@ function time() {
 }
 
 setTimeout("time()",1000 ); 
+
+document.getElementById('closeWindow').addEventListener('click', () => {
+  window.REDAPI.closeTime();
+})

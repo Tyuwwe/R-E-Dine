@@ -2,6 +2,14 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; img-src 'self' blob: data:"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; img-src 'self' blob: data:"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="./css/general.css">
     <link rel="stylesheet" type="text/css" href="./css/dining.css">
@@ -18,19 +26,20 @@
             <div class="subtitle subtitle-left">R-E-Dine 后台管理系统</R-E-Dine></div>
             <div class="list food-add-list">
                 <div class="add-title">餐品名称</div>
-                <input id="f_name" class="food-add" placeholder="不可为空">
+                <input id="f_name" class="food-add">
                 <div class="add-title">餐品售价</div>
-                <input id="f_price" class="food-add" placeholder="不可为空">
-                <div class="add-title">餐品描述</div>
-                <input id="f_desc" class="food-add" placeholder="留空自动使用默认描述">
-                <div class="add-title">餐品图片地址</div>
-                <input id="f_imglink" class="food-add" placeholder="留空自动使用默认图片">
-                <div class="warn-area"></div>
-                <button id="addsubmit" class="addBTN">提交</button>
+                <input id="f_price" class="food-add">
+                <div class="add-title">餐品数量</div>
+                <input id="f_count" class="food-add">
+                <div class="add-title">餐品图片</div>
+                <img id="f_addpic-img" class="addpic-img" src="./assets/pic/food.jpg">
+                <label for="f_addpic" class="addpicBTN">点击选择图片上传</label>
+                <input type="file" id="f_addpic" class="addpic"/>
+                <button class="addBTN">提交</button>
             </div>
         </div>
     </div>
   </body>
-  <script src="./js/dining-add-renderer.js"></script>
+  <script src="./js/dining-add-old-renderer.js"></script>
   <script src="./js/general-functions.js"></script>
 </html>

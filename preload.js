@@ -2,24 +2,25 @@ const {  contextBridge, ipcRenderer } = require('electron')
 
 contextBridge.exposeInMainWorld('REDAPI', {
     openIndex: () => ipcRenderer.send('window-index'),
-    openOrder: () => ipcRenderer.send('window-order'),
+    openOrder: (orderID) => ipcRenderer.send('window-order', orderID),
     signup: () => ipcRenderer.send('user-signup'),
     login: () => ipcRenderer.send('window-login'),
     user_login: (user_id, user_role) => ipcRenderer.send('user-login', user_id, user_role),
     settings: () => ipcRenderer.send('window-settings'),
     open_github: () => ipcRenderer.send('open-github'),
     debug_reload_merchant : () => ipcRenderer.send('debug_reload_merchant'),
-    debug_reload_merchant_add : () => ipcRenderer.send('debug_reload_merchant_add'),
-    debug_reload_merchant_del : () => ipcRenderer.send('debug_reload_merchant_del'),
-    debug_reload_merchant_edit : () => ipcRenderer.send('debug_reload_merchant_edit'),
-    debug_reload_merchant_edit_attr : () => ipcRenderer.send('debug_reload_merchant_edit_attr'),
+    debug_reload_merchant_add : (userRole) => ipcRenderer.send('debug_reload_merchant_add', userRole),
+    debug_reload_merchant_del : (userRole) => ipcRenderer.send('debug_reload_merchant_del', userRole),
+    debug_reload_merchant_edit : (userRole) => ipcRenderer.send('debug_reload_merchant_edit', userRole),
+    debug_reload_merchant_edit_attr : (userRole, dish_id) => ipcRenderer.send('debug_reload_merchant_edit_attr', userRole, dish_id),
     choose_chinese : () => ipcRenderer.send('choose-chinese'),
     choose_western : () => ipcRenderer.send('choose-western'),
     requestID : () => ipcRenderer.send('requestID'),
     returnID : (user_id) => ipcRenderer.on('returnID', user_id),
     openOrderDetail : (order_id) => ipcRenderer.send('order-detail', order_id),
     openTime : () => ipcRenderer.send('open-time'),
-    requestUrl : () => ipcRenderer.invoke('requestURL'),
+    closeTime : () => ipcRenderer.send('close-time'),
+    requestUrl : () => ipcRenderer.invoke('requestURL')
 })
 
 contextBridge.exposeInMainWorld('darkMode', {

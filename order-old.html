@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/general.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>RED 点餐配送系统</title>
+  </head>
+  <body class="order-body">
+    <div class="drag-part"></div>
+    <div class="wrapper">
+        <div id="closeWindow" class="btn close-btn"></div>
+    </div>
+    <div id='map-box' class="map-box">
+        <img id="map-img" class="mapimg" src="./assets/pic/example-map.png">
+    </div>
+    <div class="bkg-box">
+        <div class="info-box">
+            <div class="info-box-title">已选订单：</div>
+            <div class="info-box-text">距离 <f class="info-box-tag">3.7km</f> 预计送达用时 <f class="info-box-tag">30分钟</f>。</div>
+            <div class="info">
+              <div class="info-list-title">Order#1</div>
+              <div class="info-rest">
+                <div class="info-list-rest">French Restaurant</div>
+                <div class="info-list-price">5.99<f class="yuan-info"> 元</f></div>
+              </div>
+            </div>
+            <div class="info">
+              <div class="info-list-title">Order#2</div>
+              <div class="info-rest">
+                <div class="info-list-rest">Italian Restaurant</div>
+                <div class="info-list-price">6.99<f class="yuan-info"> 元</f></div>
+              </div>
+            </div>
+            <div class="info">
+              <div class="info-list-title">Order#3</div>
+              <div class="info-rest">
+                <div class="info-list-rest">French Restaurant</div>
+                <div class="info-list-price">7.99<f class="yuan-info"> 元</f></div>
+              </div>
+            </div>
+            <div class="info">
+              <div class="info-list-title">Order#4</div>
+              <div class="info-rest">
+                <div class="info-list-rest">French Restaurant</div>
+                <div class="info-list-price">8.99<f class="yuan-info"> 元</f></div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="check-box">
+        <div class="checkout">
+            <div class="price">34.99<f class="yuan"> 元</f></div>
+        </div>
+        <button class="checkBTN">确认</button>
+    </div>
+    <script src="./js/order-renderer.js"></script>
+    <script src="./js/general-functions.js"></script>
+  </body>
+</html>

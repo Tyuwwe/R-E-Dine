@@ -26,7 +26,7 @@ function getdish(url) {
                 //console.log(i);
                 var newdiv = document.createElement('div');
                 newdiv.setAttribute("class", "foodlist-item");
-                newdiv.innerHTML = "<img class='foodlist-item-img' src='" + data[i - 1].image_url.substring(0, data[i - 1].image_url.lastIndexOf(".")) + ".th" + data[i - 1].image_url.substring(data[i - 1].image_url.lastIndexOf(".")) + "'><div class='foodlist-right-container'><div class='foodlist-foodname'>" + data[i - 1].name + "</div><div class='foodlist-price'><div class='foodlist-pricetext'>" + data[i - 1].price + "</div><div class='foodlist-yuan'>元</div></div></div><div class='num-container'><input id='" + data[i-1].id + "'class='num-number' type='number' min='0' max='9' step='1' value='0'></div>";                
+                newdiv.innerHTML = "<img class='foodlist-item-img' src='" + getIMGtn(data[i - 1]) + "'><div class='foodlist-right-container'><div class='foodlist-foodname'>" + data[i - 1].name + "</div><div class='foodlist-price'><div class='foodlist-pricetext'>" + data[i - 1].price + "</div><div class='foodlist-yuan'>元</div></div></div><div class='num-container'><input id='" + data[i-1].id + "'class='num-number' type='number' min='0' max='9' step='1' value='0'></div>";                
                 document.getElementById('foodlist-box').appendChild(newdiv);
             }
         }
@@ -41,6 +41,7 @@ window.REDAPI.returnID((_value, userID) => {
 });
 window.REDAPI.requestID();
 
+var orderID;
 
 function order() {
     var num = document.getElementsByClassName('num-number');
@@ -65,6 +66,7 @@ function order() {
                 console.error('提交失败');
             } else {
                 console.log('提交成功');
+                window.REDAPI.openOrder(data.order_id);
             }
         })
         .catch((error) => {
@@ -74,5 +76,4 @@ function order() {
 
 document.getElementById('submit').addEventListener('click', () =>{
     order();
-    //window.REDAPI.openOrder();
 })

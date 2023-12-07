@@ -61,3 +61,7 @@ if (isDarkTheme.matches) { // 是深色
     document.getElementById("modeswitch").className = 'btn darkmode-btn';
 }
 */
+
+function getIMGtn(data) {
+    return data.image_url.substring(0, data.image_url.lastIndexOf(".")) + ".th" + data.image_url.substring(data.image_url.lastIndexOf("."));
+}

@@ -38,5 +38,5 @@ getorder();
 
 document.getElementById('refresh').addEventListener('click', () => {
     document.getElementById('orderbox').innerHTML='';
-    getorder();
+    getorder(default_url);
 })

@@ -68,7 +68,7 @@ const createWindow = () => {
           }
         })
         orderdetailwin.loadURL(path.join('file:',__dirname,'delivery-detail.html?' + orderID));
-      
+
         ipcMain.on('open-time', function() {
           const timewin = new BrowserWindow({
             width: 600,
@@ -80,17 +80,15 @@ const createWindow = () => {
             }
           })
           timewin.loadURL(path.join('file:',__dirname,'delivery-time.html'));
-          orderdetailwin.close();
+
+          ipcMain.on('close-time', function() {
+            if(timewin) timewin.destroy();
+          })
         })
       })
     }
     else {
-      if(userId == 105) {
-        win.loadURL(path.join('file:',__dirname,'dining-index.html?chinese'));
-      }
-      else if(userId == 106) {
-        win.loadURL(path.join('file:',__dirname,'dining-index.html?western'));
-      }
+        win.loadURL(path.join('file:',__dirname,'dining-index.html?' + userRole));
     }
   });
 
@@ -111,8 +109,10 @@ const createWindow = () => {
     settingswin.loadURL(path.join('file:',__dirname,'settings.html'));
   })
 
+  let diningwin_index;
+
   ipcMain.on('debug_reload_merchant', function(){
-    const diningwin = new BrowserWindow({
+    diningwin_index = new BrowserWindow({
       width: 960,
       height: 740,
       frame: false,
@@ -121,11 +121,15 @@ const createWindow = () => {
         contextIsolation: true,
       }
     })
-    diningwin.loadURL(path.join('file:',__dirname,'dining-index.html'));
+    diningwin_index.loadURL(path.join('file:',__dirname,'dining-index.html'));
     win.close();
   })
 
-  ipcMain.on('debug_reload_merchant_add', function(){
+  ipcMain.on('diningRefresh', function(){
+    console.log(diningwin_index);
+  })
+
+  ipcMain.on('debug_reload_merchant_add', function(event, userRole){
     const diningwin = new BrowserWindow({
       width: 400,
       height: 800,
@@ -135,10 +139,10 @@ const createWindow = () => {
         contextIsolation: true,
       }
     })
-    diningwin.loadURL(path.join('file:',__dirname,'dining-add.html'));
+    diningwin.loadURL(path.join('file:',__dirname,'dining-add.html?' + userRole));
   })
 
-  ipcMain.on('debug_reload_merchant_edit', function(){
+  ipcMain.on('debug_reload_merchant_edit', function(event, userRole){
     const diningwin = new BrowserWindow({
       width: 800,
       height: 800,
@@ -148,10 +152,10 @@ const createWindow = () => {
         contextIsolation: true,
       }
     })
-    diningwin.loadURL(path.join('file:',__dirname,'dining-edit.html'));
+    diningwin.loadURL(path.join('file:',__dirname,'dining-edit.html?' + userRole));
   })
 
-  ipcMain.on('debug_reload_merchant_edit_attr', function(){
+  ipcMain.on('debug_reload_merchant_edit_attr', function(event, userRole, dish_id){
     const diningwin = new BrowserWindow({
       width: 400,
       height: 800,
@@ -161,10 +165,10 @@ const createWindow = () => {
         contextIsolation: true,
       }
     })
-    diningwin.loadURL(path.join('file:',__dirname,'dining-edit-attr.html'));
+    diningwin.loadURL(path.join('file:',__dirname,'dining-edit-attr.html?' + userRole + "&" + dish_id));
   })
 
-  ipcMain.on('debug_reload_merchant_del', function(){
+  ipcMain.on('debug_reload_merchant_del', function(event, userRole){
     const diningwin = new BrowserWindow({
       width: 700,
       height: 800,
@@ -174,10 +178,10 @@ const createWindow = () => {
         contextIsolation: true,
       }
     })
-    diningwin.loadURL(path.join('file:',__dirname,'dining-del.html'));
+    diningwin.loadURL(path.join('file:',__dirname,'dining-del.html?' + userRole));
   })
 
-  ipcMain.on('window-order' ,function(){
+  ipcMain.on('window-order' ,function(event, orderID){
     const orderwin = new BrowserWindow({
       width: 400,
       height: 800,
@@ -187,7 +191,7 @@ const createWindow = () => {
         contextIsolation: true,
       }
     })
-    orderwin.loadURL(path.join('file:',__dirname,'order.html'));
+    orderwin.loadURL(path.join('file:',__dirname,'order.html?' + orderID));
   })
 
   ipcMain.handle('dark-mode:toggle', () => {
